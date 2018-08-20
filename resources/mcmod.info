@@ -1,0 +1,16 @@
+[
+{
+  "modid": "emt",
+  "name": "Electro-Magic Tools",
+  "description": "Unoffiacial-Unofficial crossover IC2 and TC6.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Rumaruka"],
+  "credits": "Azanor, Tombenpotter, TehNut,fewizz ,TheSilentium, the IC2 guys and the forge guys!",
+  "logoFile": "logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

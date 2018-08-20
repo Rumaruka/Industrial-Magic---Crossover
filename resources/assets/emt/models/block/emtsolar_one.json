@@ -1,0 +1,9 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "bottom": "emt:blocks/solars/bottom",
+    "top": "emt:blocks/solars/solartop",
+    "side": "emt:blocks/solars/side",
+    "front": "emt:blocks/solars/side"
+  }
+}
