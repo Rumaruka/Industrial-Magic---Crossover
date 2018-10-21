@@ -34,6 +34,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -96,6 +98,7 @@ public class ItemInfusedQuantumChestplate extends ItemArmorElectric implements I
     }
     @Nullable
     @Override
+    @SideOnly(Side.CLIENT)
     public ModelBiped getArmorModel(EntityLivingBase entity, ItemStack stack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
         try {
             if (entity instanceof EntityPlayer) {
