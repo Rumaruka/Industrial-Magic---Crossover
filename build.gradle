@@ -33,9 +33,22 @@ minecraft {
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
+repositories {
+    maven {
+        name = "ic2"
+        url = "http://maven.ic2.player.to"
+    }
+    maven {
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'lib', include: ['*.jar'])
-
+    compileOnly 'net.industrial-craft:industrialcraft-2:2.8.99-ex112:dev'
+    deobfCompile "baubles:baubles:1.12:1.5.2"
+    deobfCompile "thaumcraft:thaumcraft:1.12.2:6.1.BETA24"
 }
 
 processResources {
