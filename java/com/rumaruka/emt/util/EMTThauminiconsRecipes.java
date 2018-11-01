@@ -1,5 +1,6 @@
 package com.rumaruka.emt.util;
 
+import com.rumaruka.emt.init.EMTBlocks;
 import com.rumaruka.emt.init.EMTItems;
 import ic2.api.item.IC2Items;
 import ic2.api.recipe.Recipes;
@@ -83,6 +84,15 @@ public class EMTThauminiconsRecipes {
                         Character.valueOf('c'), new ItemStack(Items.COMPARATOR),
                 }));
 
+        ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("EMT.solar"), new ShapedArcaneRecipe(defaultGroup,"EMT.MACH",100, new AspectList().add(Aspect.AIR,10).add(Aspect.ORDER,10).add(Aspect.WATER,10),new ItemStack(EMTBlocks.solar_compressed),
+                new Object[] {
+                        "sss",
+                        "sss",
+                        "sss",
+                        Character.valueOf('s'), new ItemStack(Item.getByNameOrId("ic2:re_battery"),1,OreDictionary.WILDCARD_VALUE),
+
+                }));
+
         //===Crucible Recipe===\\
 
         CrucibleRecipe crystalUU = new CrucibleRecipe("EMT.ALT_USE_UU",new ItemStack(EMTItems.materials_uumatterdrop),IC2Items.getItem("fluid_cell", "ic2uu_matter"),new AspectList().add(Aspect.CRYSTAL,8).add(Aspect.MAGIC,8).add(Aspect.ORDER,8));
@@ -126,6 +136,10 @@ public class EMTThauminiconsRecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.qBOT"),qBOT);
         InfusionRecipe qGOR = new InfusionRecipe("EMT.ARMORS", new ItemStack(EMTItems.quantumgoggles),4, new AspectList().add(Aspect.ENERGY,20).add(Aspect.ORDER,15).add(Aspect.SENSES,16), new ItemStack(EMTItems.nanogoggles), new ItemStack(Items.DIAMOND), new ItemStack(Item.getByNameOrId("ic2:quantum_helmet"),1,OreDictionary.WILDCARD_VALUE), new ItemStack(Items.MILK_BUCKET),new ItemStack(EMTItems.materials_thaumiumplate),new ItemStack(EMTItems.materials_thaumiumplate), new ItemStack(Item.getByNameOrId("ic2:crafting"),1,4),"circuitAdvanced");
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.qGOR"),qGOR);
+
+        InfusionRecipe crystUUtoDiam = new InfusionRecipe("EMT.PER" ,new ItemStack(Items.DIAMOND),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),new ItemStack(Items.GOLD_INGOT),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoDi"),crystUUtoDiam);
+
     }
 
     private static void $insertAspects() {

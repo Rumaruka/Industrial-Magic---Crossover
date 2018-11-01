@@ -15,6 +15,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import thaumcraft.api.items.IVisDiscountGear;
 
 import javax.annotation.Nullable;
@@ -37,6 +39,7 @@ public class  ItemFeatherWing extends ItemArmor implements IVisDiscountGear {
 
     @Nullable
     @Override
+    @SideOnly(Side.CLIENT)
     public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
         try {
             if (entityLiving instanceof EntityPlayer) {

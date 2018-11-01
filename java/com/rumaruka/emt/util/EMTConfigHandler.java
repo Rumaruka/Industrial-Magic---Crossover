@@ -35,7 +35,7 @@ public class EMTConfigHandler {
     public static int inventoryBaubleProdution;
     public static int armorBaubleProduction;
     public static boolean nightVisionOff;
-
+    public static int essenstialGeneratorTicks;
 
 
     public static void init(File file) {
@@ -67,6 +67,7 @@ public class EMTConfigHandler {
         compressedSolarOutput = cfg.get(VALUES, "Compressed Solar Panel Output", 10, "This is the number you have to modify if you want to make the Compressed Solar Panel yield " + "more or less EU per tick. Really, you shouldn't touch that, " + "since it's pretty balanced as it is.").getDouble(compressedSolarOutput);
         doubleCompressedSolarOutput = cfg.get(VALUES, "Double Compressed Solar Panel Output", 100, "This is the number you have to modify if you want to make the Double Compressed Solar Panel " + "yield more or less EU per tick. Really, you shouldn't touch that, " + "since it's pretty balanced as it is.").getDouble(doubleCompressedSolarOutput);
         tripleCompressedSolarOutput = cfg.get(VALUES, "Triple Compressed Solar Panel Output", 1000, "This is the number you have to modify if you want to make the Triple Compressed Solar Panel " + "yield more or less EU per tick. Really, you shouldn't touch that, " + "since it's pretty balanced as it is.").getDouble(tripleCompressedSolarOutput);
+        essenstialGeneratorTicks = cfg.get(VALUES, "Ticks Generator", 120, "This is the number you have to modify if you want to make the Triple Compressed Solar Panel " + "yield more or less EU per tick. Really, you shouldn't touch that, " + "since it's pretty balanced as it is.").getInt(essenstialGeneratorTicks);
 
 
 

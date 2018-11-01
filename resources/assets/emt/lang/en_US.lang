@@ -94,6 +94,7 @@ item.electrichoegrowth.name=Electric Hoe of Growth
 
 
 #=============Block Names=============
+
 tile.EMT.electricCloud.name=Electric Cloud
 tile.EMT.shield.name=Shield Block
 tile.EMT.portablenode.name=Portable Node
@@ -103,27 +104,27 @@ tile.EMT.essentia.auram.name=Auram Generator
 tile.EMT.essentia.aer.name=Aer Generator
 tile.EMT.machine.wandrecharge.name=Industrial Wand Charging Station
 tile.EMT.machine.etheralprocessor.name=Ethereal Processor
-tile.EMT.solar.compressed.name=Compressed Solar Panel
-tile.EMT.solar.doublecompressed.name=Double Compressed Solar Panel
-tile.EMT.solar.triplecompressed.name=Triple Compressed Solar Panel
-tile.EMT.solar.water.name=Water Infused Compressed Solar Panel
-tile.EMT.solar.doublewater.name=Water Infused Double Compressed Solar Panel
-tile.EMT.solar.triplewater.name=Water Infused Triple Compressed Solar Panel
-tile.EMT.solar.dark.name=Entropy Infused Compressed Solar Panel
-tile.EMT.solar.doubledark.name=Entropy Double Infused Compressed Solar Panel
-tile.EMT.solar.tripledark.name=Entropy Triple Infused Compressed Solar Panel
-tile.EMT.solar.order.name=Order Infused Compressed Solar Panel
-tile.EMT.solar.doubleorder.name=Order Infused Double Compressed Solar Panel
-tile.EMT.solar.tripleorder.name=Order Infused Triple Compressed Solar Panel
-tile.EMT.solar.fire.name=Fire Infused Compressed Solar Panel
-tile.EMT.solar.doublefire.name=Fire Infused Double Compressed Solar Panel
-tile.EMT.solar.triplefire.name=Fire Infused Triple Compressed Solar Panel
-tile.EMT.solar.air.name=Air Infused Compressed Solar Panel
-tile.EMT.solar2.doubleair.name=Air Infused Double Compressed Solar Panel
-tile.EMT.solar2.tripleair.name=Air Infused Triple Compressed Solar Panel
-tile.EMT.solar2.earth.name=Earth Infused Compressed Solar Panel
-tile.EMT.solar2.doubleearth.name=Earth Infused Double Compressed Solar Panel
-tile.EMT.solar2.tripleearth.name=Earth Infused Triple Compressed Solar Panel
+tile.solar_compressed.name=Compressed Solar Panel
+tile.solar_doublecompressed.name=Double Compressed Solar Panel
+tile.solar_triplecompressed.name=Triple Compressed Solar Panel
+tile.solar_watercompressed.name=Water Infused Compressed Solar Panel
+tile.solar_waterdoublecompressed.name=Water Infused Double Compressed Solar Panel
+tile.solar_watertriplecompressed.name=Water Infused Triple Compressed Solar Panel
+tile.solar_darkcompressed.name=Entropy Infused Compressed Solar Panel
+tile.solar_darkdoublecompressed.name=Entropy Double Infused Compressed Solar Panel
+tile.solar_darktriplecompressed.name=Entropy Triple Infused Compressed Solar Panel
+tile.solar_ordercompressed.name=Order Infused Compressed Solar Panel
+tile.solar_orderdoublecompressed.name=Order Infused Double Compressed Solar Panel
+tile.solar_ordertriplecompressed.name=Order Infused Triple Compressed Solar Panel
+tile.solar_firecompressed.name=Fire Infused Compressed Solar Panel
+tile.solar_firedoublecompressed.name=Fire Infused Double Compressed Solar Panel
+tile.solar_firetriplecompressed.name=Fire Infused Triple Compressed Solar Panel
+tile.solar_aircompressed.name=Air Infused Compressed Solar Panel
+tile.solar_airdoublecompressed.name=Air Infused Double Compressed Solar Panel
+tile.solar_airtriplecompressed.name=Air Infused Triple Compressed Solar Panel
+tile.solar_eartncompressed.name=Earth Infused Compressed Solar Panel
+tile.solar_earthdoublecompressed.name=Earth Infused Double Compressed Solar Panel
+tile.solar_earthtriplecompressed.name=Earth Infused Triple Compressed Solar Panel
 
 #=============Thaumonomicon Texts=============
 emt.rsname.Electric Magic Tools=Electric Magic Tools

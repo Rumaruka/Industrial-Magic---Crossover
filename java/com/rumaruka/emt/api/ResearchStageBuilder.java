@@ -33,13 +33,12 @@ public class ResearchStageBuilder {
         {
             int[] refs = new int[entry.getCraft().length];
             int q = 0;
-            ItemStack[] arritemStack = entry.getCraft();
+            Object[] arritemStack = entry.getCraft();
             int n = arritemStack.length;
             for(int i = 0; i < n; ++i)
             {
-                ItemStack stack = arritemStack[i];
-                int code = ResearchManager.createItemStackHash(stack);
-                ResearchManager.craftingReferences.add(code);
+                Object stack = arritemStack[i];
+                int code = stack instanceof ItemStack ? ResearchManager.createItemStackHash((ItemStack) stack) : ("oredict:" + (String) stack).hashCode();                ResearchManager.craftingReferences.add(code);
                 refs[q] = code;
                 ++q;
             }
@@ -62,7 +61,7 @@ public class ResearchStageBuilder {
 
     public ResearchStageBuilder setConsumedItems(ItemStack... obtain)
     {
-        entry.setObtain(obtain);
+        entry.setObtain((Object[]) obtain);
         return this;
     }
 

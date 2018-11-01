@@ -67,7 +67,7 @@ public class ItemSolarHelmetRevealing extends  ItemQuantumGoggles {
 
             for (int i = 0; i < player.inventory.armorInventory.size(); i++) {
                 if (enerj > 0) {
-                    if ((player.inventory.mainInventory.get(i) != null) && (player.inventory.mainInventory.get(i) .getItem() instanceof IElectricItem)) {
+                    if ((player.inventory.mainInventory.get(i) != ItemStack.EMPTY) && (player.inventory.mainInventory.get(i) .getItem() instanceof IElectricItem)) {
                         double sentPacket = ElectricItem.manager.charge(player.inventory.mainInventory.get(i) , enerj ,4, false, false);
                         enerj -= sentPacket;
                     }
@@ -77,7 +77,7 @@ public class ItemSolarHelmetRevealing extends  ItemQuantumGoggles {
             }
             for (int j = 0; j < player.inventory.mainInventory.size(); j++) {
                 if (enerj > 0) {
-                    if ((player.inventory.mainInventory.get(j) != null) && (player.inventory.mainInventory.get(j).getItem() instanceof IElectricItem)) {
+                    if ((player.inventory.mainInventory.get(j) != ItemStack.EMPTY) && (player.inventory.mainInventory.get(j).getItem() instanceof IElectricItem)) {
                         double sentPacket = ElectricItem.manager.charge(player.inventory.mainInventory.get(j), enerj, 4, false, false);
                         enerj -= sentPacket;
                     }

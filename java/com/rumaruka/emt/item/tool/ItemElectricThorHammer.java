@@ -121,7 +121,6 @@ public class ItemElectricThorHammer extends ItemSword implements IElectricItem {
             archer.setPosition(player.posX + 8, player.posY + 2, player.posZ - 8);
             world.spawnEntity(archer);
 
-
             EntityArcher archer1;
             archer1 = new EntityArcher(world);
             archer1.setPosition(player.posX - 8, player.posY + 2, player.posZ + 8);
@@ -136,8 +135,15 @@ public class ItemElectricThorHammer extends ItemSword implements IElectricItem {
             archer3 = new EntityArcher(world);
             archer3.setPosition(player.posX + 8, player.posY + 2, player.posZ + 8);
             world.spawnEntity(archer3);
+
+
             ElectricItem.manager.use(stack, lightningCost, player);
 
+
+            world.removeEntity(archer);
+            world.removeEntity(archer1);
+            world.removeEntity(archer2);
+            world.removeEntity(archer3);
         }
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
     }
