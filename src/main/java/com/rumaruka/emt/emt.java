@@ -14,6 +14,7 @@ import ic2.core.ref.TeBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -71,11 +72,15 @@ public class emt {
 
         EMTConfigHandler.init(e.getSuggestedConfigurationFile());
 
+        FMLCommonHandler.instance().bus().register(new EMTEventHandler());
+        if(FMLCommonHandler.instance().getSide().isClient())
+            FMLCommonHandler.instance().bus().register(new EMTClientHandler());
 
         MinecraftForge.EVENT_BUS.register(new KnowledgeEMT());
         KnowledgeEMT.clInit.call();
         EMTEssentiasOutputs.addPrimalOutputs();
         EMTEssentiasOutputs.addOutputs();
+
         registerPackets();
 
 
@@ -99,8 +104,8 @@ public class emt {
         EMTIC2Recipes.setup();
         EMTTile.registerTiles();
 
-        proxy.load();
 
+        proxy.load();
 
     }
 

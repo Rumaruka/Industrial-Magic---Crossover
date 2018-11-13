@@ -59,7 +59,7 @@ public class ItemThorHammer extends ItemSword {
             int i = (int) rayTraceResult.hitVec.x;
             int j = (int) rayTraceResult.hitVec.y;
             int k = (int) rayTraceResult.hitVec.z;
-            EntityLightningBolt lightningBolt = new EntityLightningBolt(worldIn, i, j, k, true);
+            EntityLightningBolt lightningBolt = new EntityLightningBolt(worldIn, i, j, k, false);
 
             worldIn.spawnEntity(lightningBolt);
             worldIn.addWeatherEffect(lightningBolt);

@@ -36,6 +36,9 @@ public class EMTConfigHandler {
     public static int armorBaubleProduction;
     public static boolean nightVisionOff;
     public static int essenstialGeneratorTicks;
+    public static boolean thorHammerResearch;
+    public static int maceratorBaseSpeed;
+    public static int etherealProcessorBonus;
 
 
     public static void init(File file) {
@@ -47,7 +50,8 @@ public class EMTConfigHandler {
         enchanting = cfg.get(RANDOM, "Enable enchanting tools", false, "Warning: the enchantability is low.").getBoolean(enchanting);
         nightVisionOff = cfg.get(RANDOM, "Enable night vision", false, "Night vision.").getBoolean(nightVisionOff);
         impactOfRain = cfg.get(RANDOM, "Impact of rain", true, "The impact of rain on all wings").getBoolean(impactOfRain);
-
+        maceratorBaseSpeed = cfg.get(VALUES, "Etheral Processor speed", 400, "Default is 400, the double of a regular furnace").getInt();
+        etherealProcessorBonus = cfg.get(VALUES, "Ethereal Processor Bonus", 10, "This number is the chance of getting a Thaumium Ingot as a bonus when " + "processing an item in the machine. It is 1 out of the number you will enter. " + "The default is 1/10 chance.").getInt();
 
 
         airOutput = cfg.get(OUTPUTS, "Aer Output", 15000).getDouble(airOutput);
@@ -68,7 +72,7 @@ public class EMTConfigHandler {
         doubleCompressedSolarOutput = cfg.get(VALUES, "Double Compressed Solar Panel Output", 100, "This is the number you have to modify if you want to make the Double Compressed Solar Panel " + "yield more or less EU per tick. Really, you shouldn't touch that, " + "since it's pretty balanced as it is.").getDouble(doubleCompressedSolarOutput);
         tripleCompressedSolarOutput = cfg.get(VALUES, "Triple Compressed Solar Panel Output", 1000, "This is the number you have to modify if you want to make the Triple Compressed Solar Panel " + "yield more or less EU per tick. Really, you shouldn't touch that, " + "since it's pretty balanced as it is.").getDouble(tripleCompressedSolarOutput);
         essenstialGeneratorTicks = cfg.get(VALUES, "Ticks Generator", 120, "This is the number you have to modify if you want to make the Triple Compressed Solar Panel " + "yield more or less EU per tick. Really, you shouldn't touch that, " + "since it's pretty balanced as it is.").getInt(essenstialGeneratorTicks);
-
+        thorHammerResearch = cfg.get(RESEARCH,"Mjolnir",false).getBoolean(thorHammerResearch);
 
 
 

@@ -75,6 +75,6 @@ public class BlockFireEssentialGenerator extends BlockContainer {
     @Nullable
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileEntityPotentiaGenerator();
+        return new TileEntityFireGenerator();
     }
 }

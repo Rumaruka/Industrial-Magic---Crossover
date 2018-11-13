@@ -24,8 +24,9 @@ public class TileEntityEarthSolar extends TileEntitySolarBase {
 
     @Override
     public void createEnergy() {
-        if(isSunVisible && this.pos.getY() <=10){
-            energy.addEnergy((output)*4.5);
+        if(isSunVisible && this.pos.getY() <10){
+            energy.addEnergy((output)*2);
+
         }
         else if (isSunVisible) {
             energy.addEnergy(output);

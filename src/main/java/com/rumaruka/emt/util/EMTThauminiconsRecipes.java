@@ -84,19 +84,77 @@ public class EMTThauminiconsRecipes {
                         Character.valueOf('c'), new ItemStack(Items.COMPARATOR),
                 }));
 
-        ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("EMT.solar"), new ShapedArcaneRecipe(defaultGroup,"EMT.MACH",100, new AspectList().add(Aspect.AIR,10).add(Aspect.ORDER,10).add(Aspect.WATER,10),new ItemStack(EMTBlocks.solar_compressed),
+        ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("EMT.solar"), new ShapedArcaneRecipe(defaultGroup,"EMT.SOLAR",100, new AspectList().add(Aspect.AIR,10).add(Aspect.ORDER,10).add(Aspect.WATER,10),new ItemStack(EMTBlocks.solar_compressed),
                 new Object[] {
                         "sss",
                         "sss",
                         "sss",
-                        Character.valueOf('s'), new ItemStack(Item.getByNameOrId("ic2:re_battery"),1,OreDictionary.WILDCARD_VALUE),
+                        Character.valueOf('s'), new ItemStack(Item.getByNameOrId("ic2:te"),1,8),
 
                 }));
+        ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("EMT.solar_double"), new ShapedArcaneRecipe(defaultGroup,"EMT.SOLAR",100, new AspectList().add(Aspect.AIR,10).add(Aspect.ORDER,10).add(Aspect.WATER,10),new ItemStack(EMTBlocks.solar_doublecompressed),
+                new Object[] {
+                        "ccc",
+                        "ccc",
+                        "ccc",
+                        Character.valueOf('c'), new ItemStack(EMTBlocks.solar_compressed),
 
+                }));
         //===Crucible Recipe===\\
 
-        CrucibleRecipe crystalUU = new CrucibleRecipe("EMT.ALT_USE_UU",new ItemStack(EMTItems.materials_uumatterdrop),IC2Items.getItem("fluid_cell", "ic2uu_matter"),new AspectList().add(Aspect.CRYSTAL,8).add(Aspect.MAGIC,8).add(Aspect.ORDER,8));
+        CrucibleRecipe crystalUU = new CrucibleRecipe("EMT.UUCr",new ItemStack(EMTItems.materials_uumatterdrop),IC2Items.getItem("fluid_cell", "ic2uu_matter"),new AspectList().add(Aspect.CRYSTAL,8).add(Aspect.MAGIC,8).add(Aspect.ORDER,8));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.crystalUU"),crystalUU );
+
+        CrucibleRecipe solarAir = new CrucibleRecipe("EMT.SOLAR_AIR",new ItemStack(EMTBlocks.solar_aircompressed),new ItemStack(EMTBlocks.solar_compressed), new AspectList().add(Aspect.AIR,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarAir"),solarAir);
+        CrucibleRecipe solarDAir = new CrucibleRecipe("EMT.SOLAR_AIR",new ItemStack(EMTBlocks.solar_airdoublecompressed),new ItemStack(EMTBlocks.solar_doublecompressed), new AspectList().add(Aspect.AIR,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarDAir"),solarDAir);
+        CrucibleRecipe solarTAir = new CrucibleRecipe("EMT.SOLAR_AIR",new ItemStack(EMTBlocks.solar_airtriplecompressed),new ItemStack(EMTBlocks.solar_triplecompressed), new AspectList().add(Aspect.AIR,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarTAir"),solarTAir);
+
+        CrucibleRecipe gAir = new CrucibleRecipe("EMT.GENERATOR_AIR",new ItemStack(EMTBlocks.aer_generator),new ItemStack(EMTBlocks.energy_generator), new AspectList().add(Aspect.AIR,25).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.gAir"),gAir);
+        CrucibleRecipe gAur = new CrucibleRecipe("EMT.GENERATOR_AUR",new ItemStack(EMTBlocks.auram_generator),new ItemStack(EMTBlocks.energy_generator), new AspectList().add(Aspect.AURA,25).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.gAur"),gAur);
+        CrucibleRecipe gIgnis = new CrucibleRecipe("EMT.GENERATOR_FIRE",new ItemStack(EMTBlocks.fire_generator),new ItemStack(EMTBlocks.energy_generator), new AspectList().add(Aspect.FIRE,25).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.gIgnis"),gIgnis);
+
+        CrucibleRecipe solarE = new CrucibleRecipe("EMT.SOLAR_EARTH",new ItemStack(EMTBlocks.solar_earthcompressed),new ItemStack(EMTBlocks.solar_compressed), new AspectList().add(Aspect.EARTH,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarE"),solarE);
+        CrucibleRecipe solarDE = new CrucibleRecipe("EMT.SOLAR_EARTH",new ItemStack(EMTBlocks.solar_earthdoublecompressed),new ItemStack(EMTBlocks.solar_doublecompressed), new AspectList().add(Aspect.EARTH,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarDE"),solarDE);
+        CrucibleRecipe solarTE = new CrucibleRecipe("EMT.SOLAR_EARTH",new ItemStack(EMTBlocks.solar_earthtriplecompressed),new ItemStack(EMTBlocks.solar_triplecompressed), new AspectList().add(Aspect.EARTH,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarTE"),solarTE);
+
+        CrucibleRecipe solarEn = new CrucibleRecipe("EMT.SOLAR_EN",new ItemStack(EMTBlocks.solar_darkcompressed),new ItemStack(EMTBlocks.solar_compressed), new AspectList().add(Aspect.ENTROPY,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarEn"),solarEn);
+        CrucibleRecipe solarDEn = new CrucibleRecipe("EMT.SOLAR_EN",new ItemStack(EMTBlocks.solar_darkdoublecompressed),new ItemStack(EMTBlocks.solar_doublecompressed), new AspectList().add(Aspect.ENTROPY,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarDEn"),solarDEn);
+        CrucibleRecipe solarTEn = new CrucibleRecipe("EMT.SOLAR_EN",new ItemStack(EMTBlocks.solar_darktriplecompressed),new ItemStack(EMTBlocks.solar_triplecompressed), new AspectList().add(Aspect.ENTROPY,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarTEn"),solarTEn);
+
+        CrucibleRecipe solarF = new CrucibleRecipe("EMT.SOLAR_FIRE",new ItemStack(EMTBlocks.solar_firecompressed),new ItemStack(EMTBlocks.solar_compressed), new AspectList().add(Aspect.FIRE,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarF"),solarF);
+        CrucibleRecipe solarDF = new CrucibleRecipe("EMT.SOLAR_FIRE",new ItemStack(EMTBlocks.solar_firedoublecompressed),new ItemStack(EMTBlocks.solar_doublecompressed), new AspectList().add(Aspect.FIRE,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarDF"),solarDF);
+        CrucibleRecipe solarTF = new CrucibleRecipe("EMT.SOLAR_FIRE",new ItemStack(EMTBlocks.solar_firetriplecompressed),new ItemStack(EMTBlocks.solar_triplecompressed), new AspectList().add(Aspect.FIRE,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarTF"),solarTF);
+
+        CrucibleRecipe solarO = new CrucibleRecipe("EMT.SOLAR_ORDER",new ItemStack(EMTBlocks.solar_ordercompressed),new ItemStack(EMTBlocks.solar_compressed), new AspectList().add(Aspect.ORDER,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarO"),solarO);
+        CrucibleRecipe solarDO = new CrucibleRecipe("EMT.SOLAR_ORDER",new ItemStack(EMTBlocks.solar_orderdoublecompressed),new ItemStack(EMTBlocks.solar_doublecompressed), new AspectList().add(Aspect.ORDER,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarDO"),solarDO);
+        CrucibleRecipe solarTO = new CrucibleRecipe("EMT.SOLAR_ORDER",new ItemStack(EMTBlocks.solar_ordertriplecompressed),new ItemStack(EMTBlocks.solar_triplecompressed), new AspectList().add(Aspect.ORDER,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarTO"),solarTO);
+
+        CrucibleRecipe solarW = new CrucibleRecipe("EMT.SOLAR_WATER",new ItemStack(EMTBlocks.solar_watercompressed),new ItemStack(EMTBlocks.solar_compressed), new AspectList().add(Aspect.WATER,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarW"),solarW);
+        CrucibleRecipe solarDW = new CrucibleRecipe("EMT.SOLAR_WATER",new ItemStack(EMTBlocks.solar_waterdoublecompressed),new ItemStack(EMTBlocks.solar_doublecompressed), new AspectList().add(Aspect.WATER,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarDW"),solarDW);
+        CrucibleRecipe solarTW = new CrucibleRecipe("EMT.SOLAR_WATER",new ItemStack(EMTBlocks.solar_watertriplecompressed),new ItemStack(EMTBlocks.solar_triplecompressed), new AspectList().add(Aspect.WATER,25).add(Aspect.MAGIC,16).add(Aspect.EXCHANGE,16));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("EMT.solarTW"),solarTW);
+
+
 
 
 
@@ -137,9 +195,47 @@ public class EMTThauminiconsRecipes {
         InfusionRecipe qGOR = new InfusionRecipe("EMT.ARMORS", new ItemStack(EMTItems.quantumgoggles),4, new AspectList().add(Aspect.ENERGY,20).add(Aspect.ORDER,15).add(Aspect.SENSES,16), new ItemStack(EMTItems.nanogoggles), new ItemStack(Items.DIAMOND), new ItemStack(Item.getByNameOrId("ic2:quantum_helmet"),1,OreDictionary.WILDCARD_VALUE), new ItemStack(Items.MILK_BUCKET),new ItemStack(EMTItems.materials_thaumiumplate),new ItemStack(EMTItems.materials_thaumiumplate), new ItemStack(Item.getByNameOrId("ic2:crafting"),1,4),"circuitAdvanced");
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.qGOR"),qGOR);
 
-        InfusionRecipe crystUUtoDiam = new InfusionRecipe("EMT.PER" ,new ItemStack(Items.DIAMOND),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),new ItemStack(Items.GOLD_INGOT),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
-        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoDi"),crystUUtoDiam);
 
+        InfusionRecipe triple_solar = new InfusionRecipe("EMT.SOLAR", new ItemStack(EMTBlocks.solar_triplecompressed),4, new AspectList().add(primals(10)), new ItemStack(EMTBlocks.solar_doublecompressed), new ItemStack(EMTBlocks.solar_doublecompressed), new ItemStack(EMTBlocks.solar_doublecompressed), new ItemStack(EMTBlocks.solar_doublecompressed), new ItemStack(EMTBlocks.solar_doublecompressed), new ItemStack(EMTBlocks.solar_doublecompressed), new ItemStack(EMTBlocks.solar_doublecompressed), new ItemStack(EMTBlocks.solar_doublecompressed), new ItemStack(EMTBlocks.solar_doublecompressed));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.solar_triple"),triple_solar);
+
+
+        InfusionRecipe pot_generator = new InfusionRecipe("EMT.GENERATOR", new ItemStack(EMTBlocks.energy_generator),5,new AspectList().add(Aspect.ENERGY,64).add(Aspect.MAGIC,65).add(Aspect.METAL,64).add(Aspect.EXCHANGE,64).add(Aspect.MECHANISM,45),new ItemStack(Item.getByNameOrId("ic2:te"),1,7),new ItemStack(Items.DIAMOND),new ItemStack(BlocksTC.jarNormal),new ItemStack(Blocks.HOPPER),new ItemStack(Item.getByNameOrId("ic2:te"),1,78),new ItemStack(Item.getByNameOrId("ic2:te"),1,56),new ItemStack(Item.getByNameOrId("ic2:crafting"),1,23),new ItemStack(Item.getByNameOrId("ic2:resource"),1,13));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.pot_generator"),pot_generator);
+
+        //UU_CrystalToMateraila
+
+        InfusionRecipe crystUUtoCoal = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Items.COAL,16),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),new ItemStack(Items.COAL,1,1),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoCoal"),crystUUtoCoal);
+
+        InfusionRecipe crystUUtoDiam = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Items.DIAMOND),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),new ItemStack(Items.GOLD_INGOT),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoDi"),crystUUtoDiam);
+        InfusionRecipe crystUUtoGold = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Items.GOLD_INGOT,2),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),new ItemStack(Items.IRON_INGOT),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoGold"),crystUUtoGold);
+
+        InfusionRecipe crystUUtoCopperCr = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Item.getByNameOrId("ic2:crushed"),32,0),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),new ItemStack(BlocksTC.stoneArcane),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoCopperCr"),crystUUtoCopperCr);
+        InfusionRecipe crystUUtoLeadCr = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Item.getByNameOrId("ic2:crushed"),32,3),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),new ItemStack(BlocksTC.amberBlock),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoLeadCr"),crystUUtoLeadCr);
+        InfusionRecipe crystUUtoTinCr = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Item.getByNameOrId("ic2:crushed"),32,5),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),new ItemStack(BlocksTC.stoneArcaneBrick),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoTinCr"),crystUUtoTinCr);
+        InfusionRecipe crystUUtoIrid = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Item.getByNameOrId("ic2:misc_resource"),2,1),4,new AspectList().add(Aspect.FIRE,64).add(Aspect.WATER,64).add(Aspect.AIR,64).add(Aspect.EARTH,64).add(Aspect.ORDER,64).add(Aspect.ENTROPY,64),new ItemStack(Item.getByNameOrId("ic2:nuclear"),1,2),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoIrid"),crystUUtoIrid);
+        InfusionRecipe crystUUtoUran = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Item.getByNameOrId("ic2:nuclear"),2,2),4,new AspectList().add(Aspect.FIRE,64).add(Aspect.WATER,64).add(Aspect.AIR,64).add(Aspect.EARTH,64).add(Aspect.ORDER,64).add(Aspect.ENTROPY,64),new ItemStack(Items.DIAMOND),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoUran"),crystUUtoUran);
+
+        InfusionRecipe crystUUtoGlow = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Blocks.GLOWSTONE,4),4,new AspectList().add(Aspect.FIRE,8).add(Aspect.WATER,8).add(Aspect.AIR,8).add(Aspect.EARTH,8).add(Aspect.ORDER,8).add(Aspect.ENTROPY,8),new ItemStack(Items.GLOWSTONE_DUST),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoGlow"),crystUUtoGlow);
+        InfusionRecipe crystUUtoIron = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Blocks.IRON_ORE,16),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),new ItemStack(Blocks.STONEBRICK),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoIronOre"),crystUUtoIron);
+        InfusionRecipe crystUUtoUranOre = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Item.getByNameOrId("ic2:resource"),8,4),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),new ItemStack(BlocksTC.amberBrick),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoUranOre"),crystUUtoUranOre);
+        InfusionRecipe crystUUtoLapis = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Items.DYE,8,4),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),ConfigItems.AIR_CRYSTAL,new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoLapis"),crystUUtoLapis);
+        InfusionRecipe crystUUtoRed = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Items.REDSTONE,24),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),ConfigItems.FIRE_CRYSTAL,new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoRed"),crystUUtoRed);
+        InfusionRecipe crystUUtoResin = new InfusionRecipe("EMT.UU_M" ,new ItemStack(Item.getByNameOrId("ic2:misc_resource"),21,4),4,new AspectList().add(Aspect.FIRE,10).add(Aspect.WATER,10).add(Aspect.AIR,10).add(Aspect.EARTH,10).add(Aspect.ORDER,10).add(Aspect.ENTROPY,10),ConfigItems.WATER_CRYSTAL,new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),new ItemStack(EMTItems.materials_uumatterdrop),ConfigItems.EARTH_CRYSTAL,ConfigItems.EARTH_CRYSTAL);
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.uutoResin"),crystUUtoResin);
     }
 
     private static void $insertAspects() {

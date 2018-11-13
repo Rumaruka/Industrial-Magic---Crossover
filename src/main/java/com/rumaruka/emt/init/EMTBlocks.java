@@ -2,10 +2,11 @@ package com.rumaruka.emt.init;
 
 import com.google.common.base.Strings;
 import com.google.common.collect.ObjectArrays;
-import com.rumaruka.emt.block.generator.BlockAerEssentialGenerator;
-import com.rumaruka.emt.block.generator.BlockAuramEssentialGenerator;
-import com.rumaruka.emt.block.generator.BlockEnergyEssentialGenerator;
-import com.rumaruka.emt.block.generator.BlockFireEssentialGenerator;
+import com.rumaruka.emt.block.generator.*;
+import com.rumaruka.emt.block.itemblocks.ItemAerGenerator;
+import com.rumaruka.emt.block.itemblocks.ItemAuramGenerator;
+import com.rumaruka.emt.block.itemblocks.ItemEnergyGenerator;
+import com.rumaruka.emt.block.itemblocks.ItemIgnisGenerator;
 import com.rumaruka.emt.block.solar.air.BlockAirCompressedSolar;
 import com.rumaruka.emt.block.solar.air.BlockAirDoubleCompressedSolar;
 import com.rumaruka.emt.block.solar.air.BlockAirTripleCompressedSolar;
@@ -85,7 +86,7 @@ public class EMTBlocks {
     public static Block energy_generator;
 
 
-public static void init(){
+    public static void init(){
     solar_compressed = new BlockCompressedSolar(Material.IRON).setUnlocalizedName("solar_compressed").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
     solar_doublecompressed = new BlockDoubleCompressedSolar(Material.IRON).setUnlocalizedName("solar_doublecompressed").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
     solar_triplecompressed = new BlockTripleCompressedSolar(Material.IRON).setUnlocalizedName("solar_triplecompressed").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
@@ -120,7 +121,8 @@ public static void init(){
     energy_generator=new BlockEnergyEssentialGenerator(Material.IRON).setUnlocalizedName("energy_generator").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
 
 
-}
+    }
+
 public static void InGameRegister(){
     registerBlock(solar_compressed,solar_compressed.getUnlocalizedName().substring(5));
     registerBlock(solar_doublecompressed,solar_doublecompressed.getUnlocalizedName().substring(5));
@@ -151,10 +153,12 @@ public static void InGameRegister(){
     registerBlock(solar_ordertriplecompressed,solar_ordertriplecompressed.getUnlocalizedName().substring(5));
 
 
-    registerBlock(aer_generator,aer_generator.getUnlocalizedName().substring(5));
-    registerBlock(auram_generator,auram_generator.getUnlocalizedName().substring(5));
-    registerBlock(energy_generator,energy_generator.getUnlocalizedName().substring(5));
-    registerBlock(fire_generator,fire_generator.getUnlocalizedName().substring(5));
+    registerBlock(aer_generator, ItemAerGenerator.class,aer_generator.getUnlocalizedName().substring(5));
+    registerBlock(auram_generator, ItemAuramGenerator.class,auram_generator.getUnlocalizedName().substring(5));
+    registerBlock(energy_generator, ItemEnergyGenerator.class,energy_generator.getUnlocalizedName().substring(5));
+    registerBlock(fire_generator, ItemIgnisGenerator.class,fire_generator.getUnlocalizedName().substring(5));
+
+
 
 
 }
@@ -192,6 +196,7 @@ public static void Render(){
     registerRender(auram_generator);
     registerRender(fire_generator);
     registerRender(energy_generator);
+
 }
 
 

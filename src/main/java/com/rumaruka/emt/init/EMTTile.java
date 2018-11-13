@@ -1,11 +1,8 @@
 package com.rumaruka.emt.init;
 
 
-import com.rumaruka.emt.tile.generator.TileEntityAerGenerator;
-import com.rumaruka.emt.tile.generator.TileEntityAuramGenerator;
-import com.rumaruka.emt.tile.generator.TileEntityFireGenerator;
-import com.rumaruka.emt.tile.generator.TileEntityPotentiaGenerator;
-import com.rumaruka.emt.tile.solar.TileEntitySolarBase;
+
+import com.rumaruka.emt.tile.generator.*;
 import com.rumaruka.emt.tile.solar.air.TileEntityAirSolar;
 import com.rumaruka.emt.tile.solar.air.TileEntityDoubleAirSolar;
 import com.rumaruka.emt.tile.solar.air.TileEntityTripleAirSolar;
@@ -68,5 +65,6 @@ public class EMTTile {
         GameRegistry.registerTileEntity(TileEntityAuramGenerator.class,"TileEntityAuramGenerator");
         GameRegistry.registerTileEntity(TileEntityPotentiaGenerator.class,"TileEntityPotentiaGenerator");
         GameRegistry.registerTileEntity(TileEntityFireGenerator.class,"TileEntityFireGenerator");
+
     }
 }

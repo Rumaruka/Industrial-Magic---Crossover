@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "B_EMT3.4"
+version = "R_EMT10.5"
 group = "com.rumaruka.emt" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "EMT"
 
@@ -21,7 +21,7 @@ compileJava {
 }
 
 minecraft {
-    version = "1.12.2-14.23.4.2739"
+    version = "1.12.2-14.23.5.2770"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
@@ -33,22 +33,10 @@ minecraft {
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
-repositories {
-    maven {
-        name = "ic2"
-        url = "http://maven.ic2.player.to"
-    }
-    maven {
-        name = "CurseForge"
-        url = "https://minecraft.curseforge.com/api/maven/"
-    }
-}
-
 dependencies {
     compile fileTree(dir: 'lib', include: ['*.jar'])
-    compileOnly 'net.industrial-craft:industrialcraft-2:2.8.99-ex112:dev'
-    deobfCompile "baubles:baubles:1.12:1.5.2"
-    deobfCompile "thaumcraft:thaumcraft:1.12.2:6.1.BETA24"
+  
+
 }
 
 processResources {

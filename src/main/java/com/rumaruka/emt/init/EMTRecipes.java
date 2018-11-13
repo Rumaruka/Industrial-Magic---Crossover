@@ -86,6 +86,8 @@ public class EMTRecipes {
         });
         RecipesUtils.addSmelting(new ItemStack(EMTItems.materials_crushedorecinnabar),new ItemStack(ItemsTC.quicksilver,2));
         RecipesUtils.addSmelting(new ItemStack(EMTItems.materials_crushedoreamber),new ItemStack(ItemsTC.amber,6));
+        RecipesUtils.addSmelting(new ItemStack(EMTItems.materials_purifiedorecinnabar),new ItemStack(ItemsTC.quicksilver,4));
+        RecipesUtils.addSmelting(new ItemStack(EMTItems.materials_purifiedoreamber),new ItemStack(ItemsTC.amber,12));
     }
 
 }

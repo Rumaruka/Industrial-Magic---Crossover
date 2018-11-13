@@ -8,5 +8,6 @@ public class TileEntityFireGenerator extends TileEnitytBaseGeneratorAspect {
     public TileEntityFireGenerator(){
         aspect= Aspect.FIRE;
         output= EMTEssentiasOutputs.outputs.get(aspect.getTag());
+
     }
 }

@@ -9,5 +9,6 @@ public class TileEntityAerGenerator extends TileEnitytBaseGeneratorAspect {
         aspect= Aspect.AIR;
         output= EMTEssentiasOutputs.outputs.get(aspect.getTag());
 
+
     }
 }

@@ -84,37 +84,37 @@ public class ItemElectricThorHammer extends ItemSword implements IElectricItem {
         if (ElectricItem.manager.canUse(stack, lightningCost)) {
 
             // Corners
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ - 8,true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ + 8,true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ - 8,true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ + 8,true));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ - 8,false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ + 8,false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ - 8,false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ + 8,false));
 
             // Fronts
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX, player.posY, player.posZ - 8, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX, player.posY, player.posZ + 8, true));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX, player.posY, player.posZ - 8, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX, player.posY, player.posZ + 8, false));
 
             // Others
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ + 1, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ + 2, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ + 3, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ + 4, true));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ + 1, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ + 2, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ + 3, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ + 4, false));
 
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ - 1, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ - 2, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ - 3, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ - 4, true));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ - 1, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ - 2, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 8, player.posY, player.posZ - 3, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 8, player.posY, player.posZ - 4, false));
 
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 1, player.posY, player.posZ + 8, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 2, player.posY, player.posZ - 8, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 3, player.posY, player.posZ + 8, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX + 4, player.posY, player.posZ - 8, true));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 1, player.posY, player.posZ + 8, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 2, player.posY, player.posZ - 8, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 3, player.posY, player.posZ + 8, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX + 4, player.posY, player.posZ - 8, false));
 
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 1, player.posY, player.posZ + 8, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 2, player.posY, player.posZ - 8, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 3, player.posY, player.posZ + 8, true));
-            world.spawnEntity(new EntityLightningBolt(world, player.posX - 4, player.posY, player.posZ - 8, true));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 1, player.posY, player.posZ + 8, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 2, player.posY, player.posZ - 8, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 3, player.posY, player.posZ + 8, false));
+            world.spawnEntity(new EntityLightningBolt(world, player.posX - 4, player.posY, player.posZ - 8, false));
 
             EntityArcher archer;
             archer = new EntityArcher(world);
@@ -140,10 +140,7 @@ public class ItemElectricThorHammer extends ItemSword implements IElectricItem {
             ElectricItem.manager.use(stack, lightningCost, player);
 
 
-            world.removeEntity(archer);
-            world.removeEntity(archer1);
-            world.removeEntity(archer2);
-            world.removeEntity(archer3);
+
         }
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
     }
