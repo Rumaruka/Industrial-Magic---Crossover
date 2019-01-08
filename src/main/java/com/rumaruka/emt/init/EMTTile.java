@@ -6,7 +6,7 @@ import com.rumaruka.emt.tile.generator.*;
 import com.rumaruka.emt.tile.solar.air.TileEntityAirSolar;
 import com.rumaruka.emt.tile.solar.air.TileEntityDoubleAirSolar;
 import com.rumaruka.emt.tile.solar.air.TileEntityTripleAirSolar;
-import com.rumaruka.emt.tile.solar.compressed.TileEntityCompressSolar;
+import com.rumaruka.emt.tile.solar.compressed.TileEntityCompressedSolar;
 import com.rumaruka.emt.tile.solar.compressed.TileEntityDoubleCompressedSolar;
 import com.rumaruka.emt.tile.solar.compressed.TileEntityTripleCompressedSolar;
 import com.rumaruka.emt.tile.solar.dark.TileEntityDarkSolar;
@@ -29,7 +29,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class EMTTile {
 
     public static void registerTiles() {
-       GameRegistry.registerTileEntity(TileEntityCompressSolar.class, "tileEntityCompressedSolar");
+       GameRegistry.registerTileEntity(TileEntityCompressedSolar.class, "tileEntityCompressedSolar");
        GameRegistry.registerTileEntity(TileEntityDoubleCompressedSolar.class, "tileEntityDoubleCompressedSolar");
        GameRegistry.registerTileEntity(TileEntityTripleCompressedSolar.class, "tileEntityTripleCompressedSolar");
 

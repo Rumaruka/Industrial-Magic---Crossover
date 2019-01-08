@@ -43,7 +43,7 @@ repositories {
 dependencies {
     compile fileTree(dir: 'lib', include: ['*.jar'])
     deobfProvided "net.industrial-craft:industrialcraft-2:${ic2_version}"
-    runtime "net.industrial-craft:industrialcraft-2:${ic2_version}"
+    //runtime "net.industrial-craft:industrialcraft-2:${ic2_version}"
 
 }
 
