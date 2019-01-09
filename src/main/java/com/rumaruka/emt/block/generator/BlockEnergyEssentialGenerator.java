@@ -1,6 +1,5 @@
 package com.rumaruka.emt.block.generator;
 
-import com.rumaruka.emt.tile.generator.TileEntityFireGenerator;
 import com.rumaruka.emt.tile.generator.TileEntityPotentiaGenerator;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;

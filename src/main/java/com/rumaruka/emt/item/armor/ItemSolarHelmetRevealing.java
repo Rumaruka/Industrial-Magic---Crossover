@@ -3,7 +3,6 @@ package com.rumaruka.emt.item.armor;
 import com.rumaruka.emt.emt;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
-import ic2.core.item.armor.ItemArmorSolarHelmet;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;

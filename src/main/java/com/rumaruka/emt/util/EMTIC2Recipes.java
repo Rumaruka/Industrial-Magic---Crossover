@@ -2,10 +2,7 @@ package com.rumaruka.emt.util;
 
 import com.rumaruka.emt.init.EMTItems;
 import com.rumaruka.emt.init.IC2RecipesInput;
-import ic2.api.item.IC2Items;
-import ic2.api.recipe.IRecipeInput;
 import ic2.api.recipe.Recipes;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

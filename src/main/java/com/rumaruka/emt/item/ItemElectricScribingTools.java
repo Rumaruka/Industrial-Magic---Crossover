@@ -3,42 +3,12 @@ package com.rumaruka.emt.item;
 import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
-
-import ic2.core.IC2;
-import ic2.core.item.BaseElectricItem;
 import ic2.core.item.IPseudoDamageItem;
-import ic2.core.item.tool.ItemElectricTool;
-import ic2.core.util.LogCategory;
-import ic2.core.util.StackUtil;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityItemFrame;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.InventoryLargeChest;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityCommandBlock;
-import net.minecraft.tileentity.TileEntityDispenser;
-import net.minecraft.tileentity.TileEntityMobSpawner;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import thaumcraft.api.items.IScribeTools;
-import thaumcraft.common.items.ItemTCBase;
-import thaumcraft.common.items.tools.ItemScribingTools;
-import thaumcraft.common.tiles.crafting.TileResearchTable;
-
-import javax.annotation.Nullable;
-import java.util.List;
 
 public class ItemElectricScribingTools extends Item implements IScribeTools, IElectricItem, IPseudoDamageItem {
 

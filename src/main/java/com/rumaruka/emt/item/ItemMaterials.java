@@ -12,7 +12,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
@@ -20,10 +19,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
 import thaumcraft.api.potions.PotionFluxTaint;
-import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.lib.utils.InventoryUtils;
-
-import thaumcraft.common.config.ModConfig;
 public class ItemMaterials extends Item {
 
     public ItemMaterials() {

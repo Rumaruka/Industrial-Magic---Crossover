@@ -12,8 +12,6 @@ import com.rumaruka.emt.item.tool.ItemThorHammer;
 import com.rumaruka.emt.item.tool.ItemThorHammerBroken;
 import com.rumaruka.emt.item.tool.*;
 
-import ic2.api.energy.tile.IEnergySink;
-import ic2.core.ref.ItemName;
 import joptsimple.internal.Strings;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -23,7 +21,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftMaterials;
 
 public class EMTItems {

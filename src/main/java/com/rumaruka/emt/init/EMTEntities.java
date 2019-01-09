@@ -2,8 +2,6 @@ package com.rumaruka.emt.init;
 
 import com.rumaruka.emt.emt;
 import com.rumaruka.emt.entity.EntityArcher;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.EntityRegistry;

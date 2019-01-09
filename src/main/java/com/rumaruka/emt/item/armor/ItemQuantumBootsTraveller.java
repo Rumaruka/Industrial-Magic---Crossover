@@ -3,7 +3,6 @@ package com.rumaruka.emt.item.armor;
 import com.rumaruka.emt.emt;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nullable;

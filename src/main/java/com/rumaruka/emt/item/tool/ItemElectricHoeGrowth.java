@@ -3,16 +3,13 @@ package com.rumaruka.emt.item.tool;
 import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
-import ic2.core.util.StackUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.*;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import thaumcraft.client.fx.FXDispatcher;
-import thaumcraft.common.lib.SoundsTC;
 import thaumcraft.common.lib.utils.Utils;
 
 public class ItemElectricHoeGrowth extends ItemHoe implements IElectricItem {

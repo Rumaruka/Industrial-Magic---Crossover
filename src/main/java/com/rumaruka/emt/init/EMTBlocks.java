@@ -30,7 +30,6 @@ import com.rumaruka.emt.block.solar.water.BlockTripleWaterCompressedSolar;
 import com.rumaruka.emt.block.solar.water.BlockWaterCompressedSolar;
 import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
 import com.rumaruka.emt.emt;
-import ic2.core.ref.TeBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
