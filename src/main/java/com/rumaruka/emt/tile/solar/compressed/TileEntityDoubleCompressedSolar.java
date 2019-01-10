@@ -1,8 +1,6 @@
 package com.rumaruka.emt.tile.solar.compressed;
 
 import com.rumaruka.emt.init.EMTBlocks;
-import com.rumaruka.emt.tile.solar.TileEntitySolarBase;
-import com.rumaruka.emt.tile.solar.air.TileEntityAirSolar;
 import com.rumaruka.emt.util.EMTConfigHandler;
 import ic2.api.energy.prefab.BasicSource;
 import net.minecraft.block.state.IBlockState;
@@ -15,7 +13,7 @@ import scala.actors.threadpool.Arrays;
 
 import java.util.List;
 
-public class TileEntityDoubleCompressedSolar extends TileEntityAirSolar {
+public class TileEntityDoubleCompressedSolar extends TileEntityCompressedSolar {
 
     public TileEntityDoubleCompressedSolar(){
         super();

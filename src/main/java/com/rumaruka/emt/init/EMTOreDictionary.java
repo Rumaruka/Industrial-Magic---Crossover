@@ -1,6 +1,5 @@
 package com.rumaruka.emt.init;
 
-import ic2.api.item.IC2Items;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.blocks.BlocksTC;
 

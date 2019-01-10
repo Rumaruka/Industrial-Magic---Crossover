@@ -1,6 +1,5 @@
 package com.rumaruka.emt.util;
 
-import ic2.core.item.ItemIC2;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;

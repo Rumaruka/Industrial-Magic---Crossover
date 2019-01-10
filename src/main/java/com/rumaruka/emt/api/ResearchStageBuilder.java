@@ -61,7 +61,7 @@ public class ResearchStageBuilder {
 
     public ResearchStageBuilder setConsumedItems(ItemStack... obtain)
     {
-        entry.setObtain((Object[]) obtain);
+        entry.setObtain(obtain);
         return this;
     }
 

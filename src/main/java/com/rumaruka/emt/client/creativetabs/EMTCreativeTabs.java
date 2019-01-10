@@ -1,6 +1,6 @@
 package com.rumaruka.emt.client.creativetabs;
 
-import com.rumaruka.emt.emt;
+import com.rumaruka.emt.EMT;
 import com.rumaruka.emt.init.EMTItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
@@ -10,7 +10,7 @@ public class EMTCreativeTabs extends CreativeTabs {
     public static EMTCreativeTabs EMT_CREATIVEtabs = new EMTCreativeTabs();
 
     public EMTCreativeTabs() {
-        super(emt.MOD_ID);
+        super(EMT.MOD_ID);
         setBackgroundImageName("emt.png");
     }
 

@@ -1,17 +1,12 @@
 package com.rumaruka.emt.item.armor;
 
-import com.rumaruka.emt.emt;
+import com.rumaruka.emt.EMT;
 import com.rumaruka.emt.util.EMTTextHelper;
-import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import thaumcraft.api.items.IVisDiscountGear;
 
@@ -42,7 +37,7 @@ public class ItemThaumiumReinforcedWing extends ItemFeatherWing implements IVisD
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return emt.TEXTURE_PATH + ":textures/models/armor/thaumiumwing.png";
+        return EMT.TEXTURE_PATH + ":textures/models/armor/thaumiumwing.png";
     }
 
     @Override

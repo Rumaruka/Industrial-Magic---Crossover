@@ -1,20 +1,16 @@
 package com.rumaruka.emt.util;
 
 import baubles.api.BaublesApi;
-import com.rumaruka.emt.emt;
+import com.rumaruka.emt.EMT;
 import com.rumaruka.emt.init.EMTItems;
 import com.rumaruka.emt.item.armor.ItemFeatherWing;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.LivingSetAttackTargetEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -36,7 +32,7 @@ public class EMTEventHandler {
    }
    @SubscribeEvent
    public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent e){
-       if(e.getModID().equals(emt.MOD_ID)){
+       if(e.getModID().equals(EMT.MOD_ID)){
            EMTConfigHandler.syncConfig();
 
        }

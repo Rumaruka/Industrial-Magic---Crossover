@@ -1,6 +1,5 @@
 package com.rumaruka.emt.network;
 
-import com.rumaruka.emt.client.EMTKeys;
 import com.rumaruka.emt.init.EMTItems;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.item.ItemStack;

@@ -2,7 +2,6 @@ package com.rumaruka.emt.block.generator;
 
 import com.rumaruka.emt.tile.generator.TileEnitytBaseGeneratorAspect;
 import com.rumaruka.emt.tile.generator.TileEntityAerGenerator;
-import ic2.core.block.generator.tileentity.TileEntityBaseGenerator;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;

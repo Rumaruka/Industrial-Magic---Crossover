@@ -1,6 +1,5 @@
 package com.rumaruka.emt.block.solar.air;
 
-import com.rumaruka.emt.tile.solar.air.TileEntityAirSolar;
 import com.rumaruka.emt.tile.solar.air.TileEntityTripleAirSolar;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;

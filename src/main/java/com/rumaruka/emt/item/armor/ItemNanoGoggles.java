@@ -1,14 +1,12 @@
 package com.rumaruka.emt.item.armor;
 
-import com.rumaruka.emt.emt;
+import com.rumaruka.emt.EMT;
 import com.rumaruka.emt.util.EMTConfigHandler;
 import ic2.api.item.ElectricItem;
-import ic2.api.item.IC2Items;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.math.BlockPos;
@@ -33,7 +31,7 @@ public class ItemNanoGoggles extends ItemElectricGoggles{
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return emt.MOD_ID+ ":textures/models/armor/thaumicnanohelmet.png";
+        return EMT.MOD_ID+ ":textures/models/armor/thaumicnanohelmet.png";
     }
     @Override
     public double getDamageAbsorptionRatio() {

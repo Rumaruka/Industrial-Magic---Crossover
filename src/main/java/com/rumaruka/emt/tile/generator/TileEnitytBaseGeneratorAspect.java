@@ -4,18 +4,10 @@ import com.rumaruka.emt.tile.TileEntityBase;
 import com.rumaruka.emt.util.EMTConfigHandler;
 import ic2.api.energy.prefab.BasicSource;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
-import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 import thaumcraft.api.aspects.Aspect;
-import thaumcraft.api.aspects.IAspectSource;
 import thaumcraft.common.lib.events.EssentiaHandler;
-import thaumcraft.common.lib.network.PacketHandler;
-import thaumcraft.common.lib.network.fx.PacketFXEssentiaSource;
-
-import java.util.Random;
 
 public class TileEnitytBaseGeneratorAspect extends TileEntityBase implements ITickable {
 

@@ -1,8 +1,8 @@
 package com.rumaruka.emt.item.armor;
 
 
+import com.rumaruka.emt.EMT;
 import com.rumaruka.emt.client.model.ModelSpecialArmor;
-import com.rumaruka.emt.emt;
 import com.rumaruka.emt.init.EMTItems;
 import com.rumaruka.emt.util.EMTConfigHandler;
 import ic2.api.item.ElectricItem;
@@ -20,7 +20,6 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
@@ -29,9 +28,7 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.translation.I18n;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -64,20 +61,20 @@ public class ItemInfusedQuantumChestplate extends ItemArmorElectric implements I
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
         if(stack.getItem()==EMTItems.quantumarmor_nano){
-            return emt.TEXTURE_PATH+":textures/models/armor/quantumarmor_nano.png";
+            return EMT.TEXTURE_PATH+":textures/models/armor/quantumarmor_nano.png";
         }
         if(stack.getItem()==EMTItems.quantumarmor_jetpack){
-            return emt.TEXTURE_PATH+":textures/models/armor/quantumarmor_jetpack.png";
+            return EMT.TEXTURE_PATH+":textures/models/armor/quantumarmor_jetpack.png";
         }
         if(stack.getItem()==EMTItems.quantumarmor_quantum){
-            return emt.TEXTURE_PATH+":textures/models/armor/quantumarmor_quantum.png";
+            return EMT.TEXTURE_PATH+":textures/models/armor/quantumarmor_quantum.png";
         }
         if(stack.getItem()==EMTItems.quantumarmor_thaumium){
 
-            return emt.TEXTURE_PATH+":textures/models/armor/quantumarmor_thaumium.png";
+            return EMT.TEXTURE_PATH+":textures/models/armor/quantumarmor_thaumium.png";
         }
 
-        return emt.TEXTURE_PATH+":textures/models/armor/quantumarmor.png";
+        return EMT.TEXTURE_PATH+":textures/models/armor/quantumarmor.png";
     }
     @SubscribeEvent
     public void onEntityLivingFallEvent(LivingFallEvent event) {

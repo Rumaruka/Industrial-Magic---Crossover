@@ -1,7 +1,6 @@
 package com.rumaruka.emt.tile.solar.dark;
 
 import com.rumaruka.emt.init.EMTBlocks;
-import com.rumaruka.emt.tile.solar.TileEntitySolarBase;
 import com.rumaruka.emt.util.EMTConfigHandler;
 import ic2.api.energy.prefab.BasicSource;
 import net.minecraft.block.state.IBlockState;

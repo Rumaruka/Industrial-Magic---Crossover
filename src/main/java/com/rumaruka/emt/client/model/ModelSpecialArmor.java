@@ -1,15 +1,9 @@
 package com.rumaruka.emt.client.model;
-import net.minecraft.client.model.ModelBase;
+
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBow;
-
-
-import org.lwjgl.opengl.GL11;
 
 
 

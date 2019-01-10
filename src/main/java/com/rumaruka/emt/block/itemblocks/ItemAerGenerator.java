@@ -1,15 +1,10 @@
 package com.rumaruka.emt.block.itemblocks;
 
-import com.rumaruka.emt.tile.generator.TileEnitytBaseGeneratorAspect;
-import com.rumaruka.emt.tile.generator.TileEntityAerGenerator;
-import com.rumaruka.emt.util.EMTTextHelper;
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;

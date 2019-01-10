@@ -2,11 +2,8 @@ package com.rumaruka.emt.item.tool;
 
 import com.rumaruka.emt.util.EMTConfigHandler;
 import ic2.api.item.ElectricItem;
-import ic2.core.item.tool.ItemScanner;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,24 +11,17 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.*;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.event.ForgeEventFactory;
-import thaumcraft.Thaumcraft;
-import thaumcraft.api.ThaumcraftApi;
-import thaumcraft.api.research.ScanningManager;
-import thaumcraft.common.entities.EntityFollowingItem;
-import thaumcraft.common.items.tools.ItemElementalPickaxe;
-import thaumcraft.common.items.tools.ItemThaumometer;
 import thaumcraft.common.lib.SoundsTC;
 import thaumcraft.common.lib.utils.BlockUtils;
-import thaumcraft.common.lib.utils.EntityUtils;
-
-import java.util.ArrayList;
-import java.util.Iterator;
 
 public class ItemRockbreakerDrill extends ItemThaumiumDrill {
     private static final Block[] isEffective = { Blocks.NETHER_BRICK, Blocks.NETHERRACK, Blocks.GLOWSTONE, Blocks.IRON_BLOCK, Blocks.GOLD_BLOCK, Blocks.DIAMOND_BLOCK, Blocks.LAPIS_BLOCK, Blocks.REDSTONE_BLOCK, Blocks.REDSTONE_ORE, Blocks.EMERALD_ORE, Blocks.EMERALD_ORE, Blocks.STONEBRICK, Blocks.GLASS, Blocks.STONE, Blocks.GOLD_ORE, Blocks.IRON_ORE, Blocks.COAL_ORE, Blocks.COBBLESTONE,

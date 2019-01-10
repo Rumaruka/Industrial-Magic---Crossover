@@ -1,18 +1,11 @@
 package com.rumaruka.emt.block.solar.compressed;
 
-import com.rumaruka.emt.init.EMTBlocks;
-
-import com.rumaruka.emt.tile.solar.compressed.TileEntityCompressSolar;
-import ic2.core.ref.TeBlock;
-import net.minecraft.block.Block;
+import com.rumaruka.emt.tile.solar.compressed.TileEntityCompressedSolar;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
@@ -88,6 +81,6 @@ public class BlockCompressedSolar extends BlockContainer {
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
 
-        return new TileEntityCompressSolar();
+        return new TileEntityCompressedSolar();
     }
 }

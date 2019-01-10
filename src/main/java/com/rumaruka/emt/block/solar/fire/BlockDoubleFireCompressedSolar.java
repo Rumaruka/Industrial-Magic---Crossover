@@ -1,7 +1,6 @@
 package com.rumaruka.emt.block.solar.fire;
 
 import com.rumaruka.emt.tile.solar.fire.TileEntityDoubleFireSolar;
-import com.rumaruka.emt.tile.solar.fire.TileEntityFireSolar;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;

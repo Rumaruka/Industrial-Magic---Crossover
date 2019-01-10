@@ -1,7 +1,6 @@
 package com.rumaruka.emt.block.solar.water;
 
 import com.rumaruka.emt.tile.solar.water.TileEntityDoubleWaterSolar;
-import com.rumaruka.emt.tile.solar.water.TileEntityWaterSolar;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;

@@ -1,20 +1,14 @@
 package com.rumaruka.emt.item.armor;
 
+import com.rumaruka.emt.EMT;
 import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
-import com.rumaruka.emt.emt;
 import com.rumaruka.emt.util.EMTConfigHandler;
-import com.rumaruka.emt.util.EMTTextHelper;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
 import ic2.api.item.IMetalArmor;
-import net.minecraft.client.entity.EntityOtherPlayerMP;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.EntityTracker;
-import net.minecraft.entity.ai.EntityAILandOnOwnersShoulder;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -24,23 +18,17 @@ import net.minecraft.nbt.NBTTagInt;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.storage.AnvilChunkLoader;
 import net.minecraftforge.common.ISpecialArmor;
-import net.minecraftforge.common.ISpecialArmor.ArmorProperties;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import thaumcraft.Thaumcraft;
 import thaumcraft.api.items.IRechargable;
 import thaumcraft.api.items.IVisDiscountGear;
 import thaumcraft.api.items.RechargeHelper;
-import thaumcraft.common.items.armor.ItemBootsTraveller;
 import thaumcraft.common.lib.events.PlayerEvents;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.List;
 
 public class ItemElectricBootsTraveller extends ItemArmor implements IElectricItem, IVisDiscountGear, IMetalArmor, ISpecialArmor , IRechargable {
     public int maxCharge = 100000;
@@ -176,7 +164,7 @@ public class ItemElectricBootsTraveller extends ItemArmor implements IElectricIt
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return emt.TEXTURE_PATH + ":textures/models/armor/electricboots.png";
+        return EMT.TEXTURE_PATH + ":textures/models/armor/electricboots.png";
     }
 
     public Item getChargedItem(ItemStack itemStack) {

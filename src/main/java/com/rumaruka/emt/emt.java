@@ -1,39 +1,44 @@
 package com.rumaruka.emt;
 
 
-import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
 import com.rumaruka.emt.command.CommandOutput;
-import com.rumaruka.emt.init.*;
-import com.rumaruka.emt.util.*;
-
-
-import ic2.api.event.TeBlockFinalCallEvent;
-import ic2.core.block.BlockTileEntity;
-import ic2.core.block.TeBlockRegistry;
-import ic2.core.ref.TeBlock;
-import net.minecraft.block.material.Material;
+import com.rumaruka.emt.init.EMTBlocks;
+import com.rumaruka.emt.init.EMTEntities;
+import com.rumaruka.emt.init.EMTItems;
+import com.rumaruka.emt.init.EMTOreDictionary;
+import com.rumaruka.emt.init.EMTRecipes;
+import com.rumaruka.emt.init.EMTTile;
+import com.rumaruka.emt.proxy.CommonProxy;
+import com.rumaruka.emt.util.EMTClientHandler;
+import com.rumaruka.emt.util.EMTConfigHandler;
+import com.rumaruka.emt.util.EMTEssentiasOutputs;
+import com.rumaruka.emt.util.EMTEventHandler;
+import com.rumaruka.emt.util.EMTIC2Recipes;
+import com.rumaruka.emt.util.EMTThauminiconsRecipes;
+import com.rumaruka.emt.util.KnowledgeEMT;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
-import com.rumaruka.emt.proxy.CommonProxy;
-import net.minecraftforge.fml.common.event.*;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchCategory;
 
 @Mod(
-        modid = emt.MOD_ID,
-        name = emt.NAME,
-        version = emt.VERSION,
-        dependencies = emt.DEPENDS
+        modid = EMT.MOD_ID,
+        name = EMT.NAME,
+        version = EMT.VERSION,
+        dependencies = EMT.DEPENDS
 
 )
-public class emt {
+public class EMT {
 
 
     public static final String NAME = "Electro-Magic Tools";
@@ -58,7 +63,7 @@ public class emt {
 
 
     @Instance(MOD_ID)
-    public static emt instance;
+    public static EMT instance;
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
 

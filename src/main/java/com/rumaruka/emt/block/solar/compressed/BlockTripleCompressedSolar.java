@@ -1,6 +1,5 @@
 package com.rumaruka.emt.block.solar.compressed;
 
-import com.rumaruka.emt.tile.solar.compressed.TileEntityDoubleCompressedSolar;
 import com.rumaruka.emt.tile.solar.compressed.TileEntityTripleCompressedSolar;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;

@@ -1,6 +1,5 @@
 package com.rumaruka.emt.block.solar.earth;
 
-import com.rumaruka.emt.tile.solar.earth.TileEntityDoubleEarthSolar;
 import com.rumaruka.emt.tile.solar.earth.TileEntityTripleEarthSolar;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;

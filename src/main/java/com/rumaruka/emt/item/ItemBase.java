@@ -1,7 +1,7 @@
 package com.rumaruka.emt.item;
 
+import com.rumaruka.emt.EMT;
 import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
-import com.rumaruka.emt.emt;
 import com.rumaruka.emt.util.EMTTextHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,7 +11,7 @@ public class ItemBase extends Item {
 
     public ItemBase(String unlocName, String textureName) {
         super();
-        setUnlocalizedName(emt.MOD_ID + unlocName);
+        setUnlocalizedName(EMT.MOD_ID + unlocName);
         setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
 
 
@@ -19,7 +19,7 @@ public class ItemBase extends Item {
 
     public ItemBase(String unlocName) {
         super();
-        setUnlocalizedName(emt.MOD_ID + ".item." + unlocName);
+        setUnlocalizedName(EMT.MOD_ID + ".item." + unlocName);
        setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
     }
 
