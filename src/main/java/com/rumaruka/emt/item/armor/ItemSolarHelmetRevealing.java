@@ -1,6 +1,6 @@
 package com.rumaruka.emt.item.armor;
 
-import com.rumaruka.emt.emt;
+import com.rumaruka.emt.EMT;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
 import net.minecraft.entity.Entity;
@@ -41,7 +41,7 @@ public class ItemSolarHelmetRevealing extends  ItemQuantumGoggles {
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return emt.TEXTURE_PATH+":textures/models/armor/solarrevealinghelmet.png";
+        return EMT.TEXTURE_PATH+":textures/models/armor/solarrevealinghelmet.png";
     }
     @Override
     public double getDamageAbsorptionRatio() {

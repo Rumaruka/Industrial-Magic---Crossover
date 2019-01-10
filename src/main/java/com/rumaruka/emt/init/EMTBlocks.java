@@ -2,6 +2,7 @@ package com.rumaruka.emt.init;
 
 import com.google.common.base.Strings;
 import com.google.common.collect.ObjectArrays;
+import com.rumaruka.emt.EMT;
 import com.rumaruka.emt.block.generator.*;
 import com.rumaruka.emt.block.itemblocks.ItemAerGenerator;
 import com.rumaruka.emt.block.itemblocks.ItemAuramGenerator;
@@ -29,7 +30,6 @@ import com.rumaruka.emt.block.solar.water.BlockDoubleWaterCompressedSolar;
 import com.rumaruka.emt.block.solar.water.BlockTripleWaterCompressedSolar;
 import com.rumaruka.emt.block.solar.water.BlockWaterCompressedSolar;
 import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
-import com.rumaruka.emt.emt;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -272,6 +272,6 @@ public static void Render(){
 
     public static void registerRender(Block block) {
         Item item = Item.getItemFromBlock(block);
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(emt.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(EMT.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
     }
 }

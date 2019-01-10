@@ -1,7 +1,7 @@
 package com.rumaruka.emt.init;
 
+import com.rumaruka.emt.EMT;
 import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
-import com.rumaruka.emt.emt;
 import com.rumaruka.emt.item.ItemElectricScribingTools;
 import com.rumaruka.emt.item.ItemIC2Baubles;
 import com.rumaruka.emt.item.ItemMaterials;
@@ -267,7 +267,7 @@ public class EMTItems {
 
     public static void renderItems(Item i) {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(i, 0, new ModelResourceLocation(
-                emt.MOD_ID + ":" + i.getUnlocalizedName().substring(5), "inventory"));
+                EMT.MOD_ID + ":" + i.getUnlocalizedName().substring(5), "inventory"));
     }
 
 }

@@ -32,13 +32,13 @@ import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchCategory;
 
 @Mod(
-        modid = emt.MOD_ID,
-        name = emt.NAME,
-        version = emt.VERSION,
-        dependencies = emt.DEPENDS
+        modid = EMT.MOD_ID,
+        name = EMT.NAME,
+        version = EMT.VERSION,
+        dependencies = EMT.DEPENDS
 
 )
-public class emt {
+public class EMT {
 
 
     public static final String NAME = "Electro-Magic Tools";
@@ -63,7 +63,7 @@ public class emt {
 
 
     @Instance(MOD_ID)
-    public static emt instance;
+    public static EMT instance;
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
 
