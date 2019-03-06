@@ -51,20 +51,6 @@ public class ItemThaumiumDrill extends ItemPickaxe implements IElectricItem {
             }
         }
     }
-    /*
-    public void getSubItems(EMTCreativeTabs tab, NonNullList<ItemStack> items) {
-
-        ItemStack itemStack = new ItemStack(this, 1);
-        if (getChargedItem(itemStack) == this) {
-            ItemStack charged = new ItemStack(this, 1);
-            ElectricItem.manager.charge(charged, 2147483647, 2147483647, true, false);
-            items.add(charged);
-        }
-        if (getEmptyItem(itemStack) == this) {
-
-            items.add(new ItemStack(this, 1, getMaxDamage()));
-        }
-    }*/
 
     private Item getEmptyItem(ItemStack itemStack) {
         return this;

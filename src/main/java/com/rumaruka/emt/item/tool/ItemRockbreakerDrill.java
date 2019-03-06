@@ -32,6 +32,7 @@ import thaumcraft.common.lib.utils.EntityUtils;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Objects;
 
 public class ItemRockbreakerDrill extends ItemThaumiumDrill {
     private static final Block[] isEffective = { Blocks.NETHER_BRICK, Blocks.NETHERRACK, Blocks.GLOWSTONE, Blocks.IRON_BLOCK, Blocks.GOLD_BLOCK, Blocks.DIAMOND_BLOCK, Blocks.LAPIS_BLOCK, Blocks.REDSTONE_BLOCK, Blocks.REDSTONE_ORE, Blocks.EMERALD_ORE, Blocks.EMERALD_ORE, Blocks.STONEBRICK, Blocks.GLASS, Blocks.STONE, Blocks.GOLD_ORE, Blocks.IRON_ORE, Blocks.COAL_ORE, Blocks.COBBLESTONE,
@@ -131,7 +132,7 @@ public class ItemRockbreakerDrill extends ItemThaumiumDrill {
         if (!player.isSneaking()) {
             for (int i = 0; i < player.inventory.mainInventory.size(); i++) {
                 ItemStack torchItem = player.inventory.mainInventory.get(i);
-                if (torchItem == ItemStack.EMPTY || !torchItem.getItem().getRegistryName().getResourcePath().contains("torch")) {
+                if (torchItem == ItemStack.EMPTY || !Objects.requireNonNull(torchItem.getItem().getRegistryName()).getResourcePath().contains("torch")) {
                     continue;
                 }
 

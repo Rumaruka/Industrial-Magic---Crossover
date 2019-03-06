@@ -3,7 +3,6 @@ package com.rumaruka.emt.item.armor;
 import com.rumaruka.emt.emt;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
-import ic2.core.item.armor.ItemArmorSolarHelmet;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -20,7 +19,7 @@ import java.util.Map;
 public class ItemSolarHelmetRevealing extends  ItemQuantumGoggles {
     private int genDay;
     private int genNight;
-    private static final Map potionCost = new HashMap();
+    private static final Map<Integer, Integer> potionCost = new HashMap<Integer, Integer>();
 
     public ItemSolarHelmetRevealing(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
         super(materialIn, renderIndexIn, equipmentSlotIn);
@@ -34,9 +33,9 @@ public class ItemSolarHelmetRevealing extends  ItemQuantumGoggles {
         transferLimit = 18000;
         energyPerDamage = 20000;
 
-        potionCost.put(Integer.valueOf(Potion.getIdFromPotion(MobEffects.POISON)), Integer.valueOf(10000));
-        potionCost.put(Integer.valueOf(Potion.getIdFromPotion(MobEffects.WITHER)), Integer.valueOf(15000));
-        potionCost.put(Integer.valueOf(Potion.getIdFromPotion(MobEffects.NAUSEA)), Integer.valueOf(5000));
+        potionCost.put(Potion.getIdFromPotion(MobEffects.POISON), 10000);
+        potionCost.put(Potion.getIdFromPotion(MobEffects.WITHER), 15000);
+        potionCost.put(Potion.getIdFromPotion(MobEffects.NAUSEA), 5000);
     }
 
     @Nullable

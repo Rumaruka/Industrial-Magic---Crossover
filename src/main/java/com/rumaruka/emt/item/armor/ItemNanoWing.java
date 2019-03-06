@@ -54,19 +54,7 @@ public class ItemNanoWing extends ItemThaumiumReinforcedWing implements IElectri
             }
         }
     }
-    /*
-    public void getSubItems(EMTCreativeTabs tab, NonNullList<ItemStack> items) {
-        ItemStack itemStack = new ItemStack(this, 1);
-        if (getChargedItem(itemStack) == this) {
-            ItemStack charged = new ItemStack(this, 1);
-            ElectricItem.manager.charge(charged, 2147483647, 2147483647, true, false);
-            items.add(charged);
-        }
-        if (getEmptyItem(itemStack) == this) {
-            items.add(new ItemStack(this, 1, getMaxDamage()));
-        }
 
-    }*/
     public boolean drainEnergy(ItemStack wing, int amount) {
         return ElectricItem.manager.discharge(wing, (double)(amount + 6), 2147483647, true, false, false) > 0.0D;
     }
@@ -125,12 +113,7 @@ public class ItemNanoWing extends ItemThaumiumReinforcedWing implements IElectri
     }
     @Override
     public boolean isBookEnchantable(ItemStack itemstack1, ItemStack itemstack2) {
-        if (EMTConfigHandler.enchanting == false) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return EMTConfigHandler.enchanting != false;
     }
 
     public int getEnergyPerDamage() {

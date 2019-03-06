@@ -5,13 +5,6 @@ import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
 import com.rumaruka.emt.command.CommandOutput;
 import com.rumaruka.emt.init.*;
 import com.rumaruka.emt.util.*;
-
-
-import ic2.api.event.TeBlockFinalCallEvent;
-import ic2.core.block.BlockTileEntity;
-import ic2.core.block.TeBlockRegistry;
-import ic2.core.ref.TeBlock;
-import net.minecraft.block.material.Material;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -20,7 +13,6 @@ import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import com.rumaruka.emt.proxy.CommonProxy;
 import net.minecraftforge.fml.common.event.*;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import thaumcraft.api.research.ResearchCategories;

@@ -43,8 +43,8 @@ import java.util.Collection;
 
 public class ItemInfusedQuantumChestplate extends ItemArmorElectric implements IJetpack {
 
-    protected static ArrayList<Integer> potionRemovecost = new ArrayList<Integer>();
-    public static AudioSource audioSource;
+    private static ArrayList<Integer> potionRemovecost = new ArrayList<Integer>();
+    private static AudioSource audioSource;
     private static boolean onJetpackActive = false;
 
 
@@ -85,7 +85,7 @@ public class ItemInfusedQuantumChestplate extends ItemArmorElectric implements I
             EntityLivingBase entity = (EntityLivingBase) event.getEntity();
             ItemStack armor = entity.getActiveItemStack();
 
-            if ((armor != null) && (armor.getItem() == this)) {
+            if ((armor.isEmpty()) && (armor.getItem() == this)) {
                 int fallDamage = Math.max((int) event.getDistance() - 10, 0);
                 double energyCost = getEnergyPerDamage() * fallDamage;
 
@@ -191,7 +191,7 @@ public class ItemInfusedQuantumChestplate extends ItemArmorElectric implements I
 
                     player.inventory.setInventorySlotContents(player.inventory.currentItem, new ItemStack(EMTItems.quantumarmor_quantum));
                 }
-                if(currentStack==ItemStack.EMPTY&& nbt.getBoolean("unequip") && player.isSneaking()){
+                if(currentStack.isEmpty()&& nbt.getBoolean("unequip") && player.isSneaking()){
                     toggleTimer=30;
                     if(currentItem==EMTItems.quantumarmor_jetpack){
                         IC2.platform.messagePlayer(player, "Jetpack disabled.", new Object[0]);
@@ -357,7 +357,7 @@ public class ItemInfusedQuantumChestplate extends ItemArmorElectric implements I
         return true;
     }
 
-    public void useWings(EntityPlayer player, ItemStack stack, World world, float motionY, float motionXZ, float f1, int amount, boolean isElectric){
+    private void useWings(EntityPlayer player, ItemStack stack, World world, float motionY, float motionXZ, float f1, int amount, boolean isElectric){
         NBTTagCompound nbt = StackUtil.getOrCreateNbtData(stack);
         boolean isJumping = IC2.keyboard.isJumpKeyDown(player);
         nbt.setBoolean("isJumping",isJumping);
@@ -444,10 +444,7 @@ public class ItemInfusedQuantumChestplate extends ItemArmorElectric implements I
 
     @Override
     public boolean isJetpackActive(ItemStack itemStack) {
-        if(itemStack.getItem()==EMTItems.quantumarmor_jetpack)
-            return true;
-        else
-            return false;
+        return itemStack.getItem() == EMTItems.quantumarmor_jetpack;
     }
 
     @Override

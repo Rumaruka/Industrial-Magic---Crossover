@@ -35,12 +35,13 @@ import thaumcraft.Thaumcraft;
 import thaumcraft.api.items.IRechargable;
 import thaumcraft.api.items.IVisDiscountGear;
 import thaumcraft.api.items.RechargeHelper;
-import thaumcraft.common.items.armor.ItemBootsTraveller;
 import thaumcraft.common.lib.events.PlayerEvents;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.List;
+import java.util.Collections;
+
+
+
 
 public class ItemElectricBootsTraveller extends ItemArmor implements IElectricItem, IVisDiscountGear, IMetalArmor, ISpecialArmor , IRechargable {
     public int maxCharge = 100000;
@@ -123,7 +124,7 @@ public class ItemElectricBootsTraveller extends ItemArmor implements IElectricIt
                 }
                 if(e>0){
                     --e;
-                }else if(e<=0&&RechargeHelper.consumeCharge(itemStack,player,1)){
+                }else if(RechargeHelper.consumeCharge(itemStack,player,1)){
                     e=60;
                 }
                 itemStack.setTagInfo("energy",new NBTTagInt(e));
@@ -155,7 +156,9 @@ public class ItemElectricBootsTraveller extends ItemArmor implements IElectricIt
     public void onPlayerJump(LivingEvent.LivingJumpEvent event) {
         if (event.getEntityLiving() instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) event.getEntityLiving();
-            boolean hasArmor = player.getEquipmentAndArmor() != null;
+
+
+            boolean hasArmor = player.getEquipmentAndArmor() != Collections.<ItemStack>emptyList();
 
             if (hasArmor)
                 player.motionY += jumpBonus;
@@ -165,7 +168,7 @@ public class ItemElectricBootsTraveller extends ItemArmor implements IElectricIt
     public void onLivingFall(LivingFallEvent event) {
         if (event.getEntity() instanceof EntityPlayer) {
             EntityPlayer entity = (EntityPlayer) event.getEntity();
-            if ((entity.inventory.armorInventory.get(0) != null) && (entity.inventory.armorInventory.get(0).getItem() instanceof ItemElectricBootsTraveller)) {
+            if ((entity.inventory.armorInventory.get(0).isEmpty()) && (entity.inventory.armorInventory.get(0).getItem() instanceof ItemElectricBootsTraveller)) {
                 ItemStack stack = entity.inventory.armorInventory.get(0);
                 if (ElectricItem.manager.use(stack, energyPerDamage, entity))
                     event.setCanceled(true);
@@ -210,7 +213,7 @@ public class ItemElectricBootsTraveller extends ItemArmor implements IElectricIt
         }
     }
 
-    public int getEnergyPerDamage() {
+    private int getEnergyPerDamage() {
         return energyPerDamage;
     }
     @Override

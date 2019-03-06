@@ -138,7 +138,7 @@ public class ItemElectricGoggles extends ItemArmor implements IElectricItem, IVi
         return 0.5D;
     }
 
-    public int getEnergyPerDamage() {
+    private int getEnergyPerDamage() {
         return energyPerDamage;
     }
 

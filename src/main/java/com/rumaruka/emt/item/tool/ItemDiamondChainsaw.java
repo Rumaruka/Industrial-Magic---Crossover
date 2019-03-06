@@ -31,6 +31,7 @@ import net.minecraftforge.common.IShearable;
 import net.minecraftforge.event.ForgeEventFactory;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Random;
 
 public class ItemDiamondChainsaw extends ItemAxe implements IElectricItem {
@@ -110,7 +111,7 @@ public class ItemDiamondChainsaw extends ItemAxe implements IElectricItem {
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         for(int i = 0; i< player.inventory.mainInventory.size(); i++){
             ItemStack torchItem = player.inventory.mainInventory.get(i);
-            if(torchItem == ItemStack.EMPTY || !torchItem.getItem().getRegistryName().getResourcePath().contains("torch")){
+            if(torchItem == ItemStack.EMPTY || !Objects.requireNonNull(torchItem.getItem().getRegistryName()).getResourcePath().contains("torch")){
                 continue;
             }
             Item item = torchItem.getItem();
@@ -256,11 +257,11 @@ public class ItemDiamondChainsaw extends ItemAxe implements IElectricItem {
         return EMTConfigHandler.enchanting;
     }
 
-    public Item getChargedItem(ItemStack itemStack) {
+    private Item getChargedItem(ItemStack itemStack) {
         return this;
     }
 
-    public Item getEmptyItem(ItemStack itemStack) {
+    private Item getEmptyItem(ItemStack itemStack) {
         return this;
     }
     @Override

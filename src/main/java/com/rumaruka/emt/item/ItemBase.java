@@ -17,7 +17,7 @@ public class ItemBase extends Item {
 
     }
 
-    public ItemBase(String unlocName) {
+    ItemBase(String unlocName) {
         super();
         setUnlocalizedName(emt.MOD_ID + ".item." + unlocName);
        setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);

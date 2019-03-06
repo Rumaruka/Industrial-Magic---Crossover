@@ -49,7 +49,7 @@ public class ItemIC2Baubles extends ItemBase implements IBauble {
                         int energyLeft = EMTConfigHandler.armorBaubleProduction;
                         for (int i = 0; i < ((EntityPlayer) player).inventory.armorInventory.size(); i++) {
                             if (energyLeft > 0) {
-                                if ((((EntityPlayer) player).inventory.armorInventory.get(i) != null) && (((EntityPlayer) player).inventory.armorInventory.get(i).getItem() instanceof IElectricItem)) {
+                                if ((((EntityPlayer) player).inventory.armorInventory.get(i).isEmpty()) && (((EntityPlayer) player).inventory.armorInventory.get(i).getItem() instanceof IElectricItem)) {
                                     double sentPacket = ElectricItem.manager.charge(((EntityPlayer) player).inventory.armorInventory.get(i), energyLeft, 4, false, false);
                                     energyLeft -= sentPacket;
                                 }
@@ -64,7 +64,7 @@ public class ItemIC2Baubles extends ItemBase implements IBauble {
                         int energyLeft = EMTConfigHandler.inventoryBaubleProdution;
                         for (int i = 0; i < ((EntityPlayer) player).inventory.mainInventory.size(); i++) {
                             if (energyLeft > 0) {
-                                if ((((EntityPlayer) player).inventory.mainInventory.get(i) != null) && (((EntityPlayer) player).inventory.mainInventory.get(i).getItem() instanceof IElectricItem)) {
+                                if ((((EntityPlayer) player).inventory.mainInventory.get(i).isEmpty()) && (((EntityPlayer) player).inventory.mainInventory.get(i).getItem() instanceof IElectricItem)) {
                                     double sentPacket = ElectricItem.manager.charge(((EntityPlayer) player).inventory.mainInventory.get(i), energyLeft, 4, false, false);
                                     energyLeft -= sentPacket;
                                 }

@@ -111,7 +111,7 @@ public class ItemOneRing extends ItemBase implements IBauble {
     public boolean canUnequip(ItemStack itemstack, EntityLivingBase player) {
         NBTTagCompound tag = new NBTTagCompound();
         ((EntityPlayer) player).writeToNBT(tag);
-        return tag.getCompoundTag("ForgeData").getInteger("MindCorruption") > 600 ? true : false;
+        return tag.getCompoundTag("ForgeData").getInteger("MindCorruption") > 600;
     }
 
 

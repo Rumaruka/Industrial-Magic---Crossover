@@ -170,7 +170,7 @@ public class EMTThauminiconsRecipes {
 
         InfusionRecipe thaumDrill = new InfusionRecipe("EMT.TOOLS",new ItemStack(EMTItems.thaumiumdrill),2,new AspectList().add(Aspect.TOOL,15).add(Aspect.ENERGY,15).add(Aspect.AVERSION,15),new ItemStack(Item.getByNameOrId("ic2:diamond_drill"),1,OreDictionary.WILDCARD_VALUE), new ItemStack(EMTItems.materials_thaumiumplate),new ItemStack(EMTItems.materials_thaumiumplate),new ItemStack(EMTItems.materials_thaumiumplate), new ItemStack(Item.getByNameOrId("ic2:plate"),1,12),new ItemStack(Items.DIAMOND),new ItemStack(Items.DIAMOND));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.tdrill"),thaumDrill);
-        InfusionRecipe rockDrill = new InfusionRecipe("EMT.TOOLS",new ItemStack(EMTItems.rockbreakerdrill),4,new AspectList().add(Aspect.TOOL,32).add(Aspect.ENERGY,45).add(Aspect.AVERSION,15).add(Aspect.WATER,32), new ItemStack(EMTItems.thaumiumdrill), new ItemStack(Items.FLINT_AND_STEEL), new ItemStack(Items.FIRE_CHARGE),new ItemStack(ItemsTC.elementalPick),new ItemStack(ItemsTC.elementalShovel), new ItemStack(Item.getByNameOrId("ic2:lapotron_crystal")),new ItemStack(Item.getByNameOrId("ic2:crafting"),1,4),new ItemStack(Item.getByNameOrId("ic2:upgrade"),1,0),new ItemStack(Item.getByNameOrId("ic2:resource"),1,11));
+        InfusionRecipe rockDrill = new InfusionRecipe("EMT.TOOLS",new ItemStack(EMTItems.rockbreakerdrill),4,new AspectList().add(Aspect.TOOL,32).add(Aspect.ENERGY,45).add(Aspect.AVERSION,15).add(Aspect.WATER,32), new ItemStack(EMTItems.thaumiumdrill), new ItemStack(Items.FLINT_AND_STEEL), new ItemStack(Items.FIRE_CHARGE),new ItemStack(ItemsTC.elementalPick),new ItemStack(ItemsTC.elementalShovel), new ItemStack(Item.getByNameOrId("ic2:energy_crystal"),1,OreDictionary.WILDCARD_VALUE),new ItemStack(Item.getByNameOrId("ic2:crafting"),1,4),new ItemStack(Item.getByNameOrId("ic2:upgrade"),1,0),new ItemStack(Item.getByNameOrId("ic2:resource"),1,11));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("EMT.rdrill"),rockDrill);
 
         InfusionRecipe eHoG = new InfusionRecipe("EMT.TOOLS",new ItemStack(EMTItems.electrichoegrowth),2,new AspectList().add(Aspect.TOOL,32).add(Aspect.ENERGY,45).add(Aspect.AVERSION,15).add(Aspect.WATER,32).add(Aspect.PLANT,25), new ItemStack(ItemsTC.elementalHoe),new ItemStack(Item.getByNameOrId("ic2:lapotron_crystal"),1,OreDictionary.WILDCARD_VALUE), new ItemStack(Item.getByNameOrId("ic2:electric_hoe")), new ItemStack(Items.DYE,1,15),new ItemStack(Item.getByNameOrId("ic2:crafting"),1,6), new ItemStack(Item.getByNameOrId("ic2:crafting"),1,5),new ItemStack(Blocks.SAPLING,1,0));
@@ -251,13 +251,14 @@ public class EMTThauminiconsRecipes {
     private static void appendAspects(String oreDict, AspectList toAdd) {
         List<ItemStack> ores = ThaumcraftApiHelper.getOresWithWildCards(oreDict);
         if (toAdd == null) toAdd = new AspectList();
-        if (ores != null && ores.size() > 0) for (ItemStack ore : ores)
+        if (ores != null && ores.size() > 0) for (ItemStack ore : ores) {
             try {
                 ItemStack oc = ore.copy();
                 oc.setCount(1);
                 appendAspects(oc, toAdd);
-            } catch (Exception oc) {
+            } catch (Exception ignored) {
             }
+        }
     }
 
     private static void appendAspects(ItemStack stack, AspectList toAdd) {

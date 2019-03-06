@@ -134,11 +134,11 @@ tile.solar_earthtriplecompressed.name=Earth Infused Triple Compressed Solar Pane
 #=============Thaumonomicon Texts=============
 research_name.emt:emt=Electro-Magic Tools aka Industrial Magic
 research_stage.emt:emt.1=Magic and Industrial? It`s possible?
-research_stage.emt:emt.2=YES!!
+research_stage.emt:emt.2=Yep, it`s working, so!! What I do with research?
 
 research_name.emt:wings_b=Start for wings
 research_stage.emt:wings_b.1=I make new material for wings
-research_stage.emt:wings_b.2=Yes, I`m write recipe!
+research_stage.emt:wings_b.2=Yes, I`m write recipe and I make wings!
 research_name.emt:wings=WINGS!
 research_stage.emt:wings.1=Im pilot! (Recipe begin wings)
 research_stage.emt:wings.2=Im make new type wings
@@ -148,20 +148,24 @@ research_stage.emt:armor.2=WIP PAGE!
 
 research_name.emt:generator=Generator and Aspects
 research_stage.emt:generator.1=Maybe I make new mechinism?
-research_stage.emt:generator.2=Yes, It`s done
+research_stage.emt:generator.2=Yes, It`s done and
+
+
 research_name.emt:generator_a=Generator and Aer
-research_stage.emt:ga.1=Maybe I make new mechinism?
-research_stage.emt:ga.2=Yes, It`s done
-research_name.emt:gf=Generator and Fire
-research_stage.emt:gf.1=Maybe I make new mechinism?
-research_stage.emt:gf.2=Yes, It`s done
+research_stage.emt:ga.1=I continue to experiment with aspects!
+research_stage.emt:ga.2=Yes, It`s done. I can generated energy with Aer Aspect
+
+research_name.emt:generator_f=Generator and Fire
+research_stage.emt:gf.1=I continue to experiment with aspects!
+research_stage.emt:gf.2=Yes, It`s done. I can generated energy with Ignis Aspect
+
 research_name.emt:generator_aur=Generator and Aura
-research_stage.emt:gaur.1=Maybe I make new mechinism?
-research_stage.emt:gaur.2=Yes, It`s done
+research_stage.emt:gaur.1=I continue to experiment with aspects!
+research_stage.emt:gaur.2=Yes, It`s done. I can generated energy with Auram Aspect
 
 research_name.emt:uu=Crystallization UU-mater
-research_stage.emt:uu.1=O.O1?
-research_stage.emt:uu.2=Yes-1
+research_stage.emt:uu.1=So if i ...
+research_stage.emt:uu.2=Wow, I foung new recipe with UU-mater
 research_name.emt:uu_m=Crystall UU
 research_stage.emt:uu_m.1=O.O?
-research_stage.emt:uu_m.2=Yes-2
+research_stage.emt:uu_m.2=ow, I foung new recipe with UU-mater

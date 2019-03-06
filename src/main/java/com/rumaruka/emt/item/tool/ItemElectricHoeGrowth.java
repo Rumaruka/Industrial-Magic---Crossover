@@ -18,8 +18,8 @@ import thaumcraft.common.lib.utils.Utils;
 public class ItemElectricHoeGrowth extends ItemHoe implements IElectricItem {
 
     public int maxCharge = 200000;
-    public int growthCost;
-    public int tillCost ;
+    private int growthCost;
+    private int tillCost ;
     public ItemElectricHoeGrowth( ) {
         super(ToolMaterial.DIAMOND);
         this.setMaxStackSize(1);
@@ -45,20 +45,7 @@ public class ItemElectricHoeGrowth extends ItemHoe implements IElectricItem {
             }
         }
     }
-    /*
-      public void getSubItems(EMTCreativeTabs tab, NonNullList<ItemStack> items) {
-        ItemStack itemStack = new ItemStack(this, 1);
-        if (getChargedItem(itemStack) == this) {
-            ItemStack charged = new ItemStack(this, 1);
-            ElectricItem.manager.charge(charged, 2147483647, 2147483647, true, false);
-            items.add(charged);
-        }
-        if (getEmptyItem(itemStack) == this) {
-            items.add(new ItemStack(this, 1, getMaxDamage()));
-        }
 
-    }
-*/
 
 
     @Override
@@ -124,11 +111,11 @@ public class ItemElectricHoeGrowth extends ItemHoe implements IElectricItem {
 
 
 
-    public Item getChargedItem(ItemStack itemStack) {
+    private Item getChargedItem(ItemStack itemStack) {
         return this;
     }
 
-    public Item getEmptyItem(ItemStack itemStack) {
+    private Item getEmptyItem(ItemStack itemStack) {
         return this;
     }
 

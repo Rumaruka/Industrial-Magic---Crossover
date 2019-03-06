@@ -7,7 +7,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.world.World;
@@ -21,7 +20,7 @@ import java.util.Set;
 
 public class ItemQuantumGoggles extends ItemNanoGoggles {
 
-    private static final Map<Integer, Integer> potionCost = new HashMap();
+    private static final HashMap<Integer, Integer> potionCost = new HashMap<>();
     public ItemQuantumGoggles(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
         super(materialIn, renderIndexIn, equipmentSlotIn);
         this.setMaxDamage(27);
@@ -32,9 +31,9 @@ public class ItemQuantumGoggles extends ItemNanoGoggles {
         transferLimit = 12000;
         energyPerDamage = 20000;
 
-        potionCost.put(Integer.valueOf(Potion.getIdFromPotion(MobEffects.POISON)), Integer.valueOf(10000));
-        potionCost.put(Integer.valueOf(Potion.getIdFromPotion(MobEffects.WITHER)), Integer.valueOf(15000));
-        potionCost.put(Integer.valueOf(Potion.getIdFromPotion(MobEffects.NAUSEA)), Integer.valueOf(5000));
+        potionCost.put(Potion.getIdFromPotion(MobEffects.POISON), 1000);
+        potionCost.put(Potion.getIdFromPotion(MobEffects.WITHER), 15000);
+        potionCost.put(Potion.getIdFromPotion(MobEffects.NAUSEA), 5000);
     }
 
     @Nullable
@@ -77,15 +76,9 @@ public class ItemQuantumGoggles extends ItemNanoGoggles {
             if (hub != null) {
                 set.add(hub);
             }
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
             e.printStackTrace();
         }
-     }
+    }
 }
 
