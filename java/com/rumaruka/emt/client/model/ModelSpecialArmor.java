@@ -4,8 +4,8 @@ import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-
-
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 public class ModelSpecialArmor extends ModelBiped {
@@ -69,7 +69,7 @@ public class ModelSpecialArmor extends ModelBiped {
         model.rotateAngleY = y;
         model.rotateAngleZ = z;
     }
-
+    @SideOnly(Side.CLIENT)
     public void render(Entity entity, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float scale) {
         EntityPlayer player = (EntityPlayer)entity;
 

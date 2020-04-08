@@ -1,7 +1,7 @@
 package com.rumaruka.emt.item.armor;
 
 
-import com.rumaruka.emt.EMT;
+import com.rumaruka.emt.emt;
 import com.rumaruka.emt.client.model.ModelSpecialArmor;
 import com.rumaruka.emt.init.EMTItems;
 import com.rumaruka.emt.util.EMTConfigHandler;
@@ -61,20 +61,20 @@ public class ItemInfusedQuantumChestplate extends ItemArmorElectric implements I
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
         if(stack.getItem()==EMTItems.quantumarmor_nano){
-            return EMT.TEXTURE_PATH+":textures/models/armor/quantumarmor_nano.png";
+            return emt.TEXTURE_PATH+":textures/models/armor/quantumarmor_nano.png";
         }
         if(stack.getItem()==EMTItems.quantumarmor_jetpack){
-            return EMT.TEXTURE_PATH+":textures/models/armor/quantumarmor_jetpack.png";
+            return emt.TEXTURE_PATH+":textures/models/armor/quantumarmor_jetpack.png";
         }
         if(stack.getItem()==EMTItems.quantumarmor_quantum){
-            return EMT.TEXTURE_PATH+":textures/models/armor/quantumarmor_quantum.png";
+            return emt.TEXTURE_PATH+":textures/models/armor/quantumarmor_quantum.png";
         }
         if(stack.getItem()==EMTItems.quantumarmor_thaumium){
 
-            return EMT.TEXTURE_PATH+":textures/models/armor/quantumarmor_thaumium.png";
+            return emt.TEXTURE_PATH+":textures/models/armor/quantumarmor_thaumium.png";
         }
 
-        return EMT.TEXTURE_PATH+":textures/models/armor/quantumarmor.png";
+        return emt.TEXTURE_PATH+":textures/models/armor/quantumarmor.png";
     }
     @SubscribeEvent
     public void onEntityLivingFallEvent(LivingFallEvent event) {
@@ -275,7 +275,7 @@ public class ItemInfusedQuantumChestplate extends ItemArmorElectric implements I
 
     @Override
     public int getItemEnchantability() {
-        if (EMTConfigHandler.enchanting == false)
+        if (!EMTConfigHandler.enchanting )
             return 0;
         else
             return 4;

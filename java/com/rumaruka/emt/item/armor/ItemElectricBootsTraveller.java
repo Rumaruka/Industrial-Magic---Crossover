@@ -1,7 +1,8 @@
 package com.rumaruka.emt.item.armor;
 
-import com.rumaruka.emt.EMT;
+
 import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
+import com.rumaruka.emt.emt;
 import com.rumaruka.emt.util.EMTConfigHandler;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
@@ -28,13 +29,12 @@ import thaumcraft.api.items.RechargeHelper;
 import thaumcraft.common.lib.events.PlayerEvents;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-<<<<<<< HEAD
+
 import java.util.Collections;
 
 
 
-=======
->>>>>>> 0801714546f4b74645997e9fcd4aabbdd87cdf3e
+
 
 public class ItemElectricBootsTraveller extends ItemArmor implements IElectricItem, IVisDiscountGear, IMetalArmor, ISpecialArmor , IRechargable {
     public int maxCharge = 100000;
@@ -155,7 +155,15 @@ public class ItemElectricBootsTraveller extends ItemArmor implements IElectricIt
 
             if (hasArmor)
                 player.motionY += jumpBonus;
+
+
+            if ((player.inventory.armorInventory.get(0).isEmpty()) && (player.inventory.armorInventory.get(0).getItem() instanceof ItemElectricBootsTraveller)) {
+                ItemStack stack = player.inventory.armorInventory.get(0);
+                if (ElectricItem.manager.use(stack, energyPerDamage, player))
+                    event.setCanceled(true);
+            }
         }
+
     }
     @SubscribeEvent
     public void onLivingFall(LivingFallEvent event) {
@@ -172,7 +180,7 @@ public class ItemElectricBootsTraveller extends ItemArmor implements IElectricIt
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return EMT.TEXTURE_PATH + ":textures/models/armor/electricboots.png";
+        return emt.TEXTURE_PATH + ":textures/models/armor/electricboots.png";
     }
 
     public Item getChargedItem(ItemStack itemStack) {

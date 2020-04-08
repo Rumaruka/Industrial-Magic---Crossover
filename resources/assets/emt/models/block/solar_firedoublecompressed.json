@@ -2,7 +2,7 @@
   "parent": "block/cube",
   "textures": {
     "particle":"emt:blocks/solars/fire/fireside" ,
-    "top": "emt:blocks/solars/solartop",
+    "top": "emt:blocks/solars/doublesolartop",
     "front": "emt:blocks/solars/fire/fireside",
     "side": "emt:blocks/solars/fire/fireside",
     "bottom":"emt:blocks/solars/bottom"

@@ -1,7 +1,8 @@
 package com.rumaruka.emt.util;
 
 import baubles.api.BaublesApi;
-import com.rumaruka.emt.EMT;
+
+import com.rumaruka.emt.emt;
 import com.rumaruka.emt.init.EMTItems;
 import com.rumaruka.emt.item.armor.ItemFeatherWing;
 import net.minecraft.entity.EntityLiving;
@@ -32,7 +33,7 @@ public class EMTEventHandler {
    }
    @SubscribeEvent
    public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent e){
-       if(e.getModID().equals(EMT.MOD_ID)){
+       if(e.getModID().equals(emt.MOD_ID)){
            EMTConfigHandler.syncConfig();
 
        }

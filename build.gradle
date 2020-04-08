@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         jcenter()
-        maven { url = "http://files.minecraftforge.net/maven" }
+        maven { url = "https://files.minecraftforge.net/maven" }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
@@ -11,9 +11,9 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "${mod_version}"
+version = "12.2.0"
 group = "com.rumaruka.emt" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "EMT"
+archivesBaseName = "emt"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
@@ -21,7 +21,7 @@ compileJava {
 }
 
 minecraft {
-    version = "${mc_version}-${forge_version}"
+    version = "1.12.2-14.23.5.2847"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
@@ -29,26 +29,22 @@ minecraft {
     // stable_#            stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not always work.
     // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "${mappings_version}"
+    mappings = "snapshot_20171003"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
-
 repositories {
     maven {
         name = "ic2"
         url = "http://maven.ic2.player.to/"
     }
-    maven {
-        name = "CurseForge"
-        url = "https://minecraft.curseforge.com/api/maven/"
-    }
+    
 }
-
 dependencies {
-    deobfProvided "net.industrial-craft:industrialcraft-2:${ic2_version}"
-    runtime "net.industrial-craft:industrialcraft-2:${ic2_version}"
-    deobfCompile "baubles:baubles:1.12:1.5.2"
-    deobfCompile "thaumcraft:thaumcraft:1.12.2:6.1.BETA26"
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile  'net.industrial-craft:industrialcraft-2:2.8.197-ex112:dev'
+    compile  'net.industrial-craft:industrialcraft-2:2.8.197-ex112:api'
+   // runtime "net.industrial-craft:industrialcraft-2:2.8.197-ex112:api"
+
 }
 
 processResources {

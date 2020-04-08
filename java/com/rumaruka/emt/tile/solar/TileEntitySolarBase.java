@@ -19,14 +19,14 @@ public class TileEntitySolarBase extends TileEntityBase implements ITickable, IW
 
 
     public BasicSource energy;
-    public static Random r = new Random();
+    private static Random r = new Random();
 
 
-    public boolean isInit;
-    public boolean isSunVisible;
-    public boolean canRain;
+    protected boolean isInit;
+    protected boolean isSunVisible;
+    protected boolean canRain;
     public boolean noSunlight;
-    public int tick;
+    protected int tick;
     public double output;
 
     public TileEntitySolarBase(){

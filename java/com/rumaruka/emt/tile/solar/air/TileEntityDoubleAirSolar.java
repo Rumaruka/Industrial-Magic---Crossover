@@ -19,6 +19,7 @@ public class TileEntityDoubleAirSolar extends TileEntityAirSolar {
         super();
         energy = new BasicSource(this,20000,4);
         output= EMTConfigHandler.doubleCompressedSolarOutput;
+        bonus_tick=3.5f;
     }
 
 

@@ -1,6 +1,7 @@
 package com.rumaruka.emt.item.armor;
 
-import com.rumaruka.emt.EMT;
+
+import com.rumaruka.emt.emt;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -27,6 +28,6 @@ public class ItemNanoBootsTraveller extends ItemElectricBootsTraveller {
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return EMT.TEXTURE_PATH + ":textures/models/armor/nanobootstravel.png";
+        return emt.TEXTURE_PATH + ":textures/models/armor/nanobootstravel.png";
     }
 }

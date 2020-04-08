@@ -1,7 +1,7 @@
 package com.rumaruka.emt.util;
 
 import com.rumaruka.emt.init.EMTItems;
-import com.rumaruka.emt.init.IC2RecipesInput;
+
 import ic2.api.recipe.Recipes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,23 +13,21 @@ public class EMTIC2Recipes {
 
     public static void setup() {
 
-        IC2RecipesInput amber_ore = new IC2RecipesInput(new ItemStack(BlocksTC.oreAmber));
-        Recipes.macerator.addRecipe(amber_ore, null, false, new ItemStack[]{new ItemStack(EMTItems.materials_crushedoreamber, 2)});
 
-        IC2RecipesInput cinnabar_ore = new IC2RecipesInput(new ItemStack(BlocksTC.oreCinnabar));
-        Recipes.macerator.addRecipe(cinnabar_ore, null, false, new ItemStack[]{new ItemStack(EMTItems.materials_crushedorecinnabar, 2)});
 
-        IC2RecipesInput thaum_ingot = new IC2RecipesInput(new ItemStack(ItemsTC.ingots, 1, 0));
-        Recipes.metalformerRolling.addRecipe(thaum_ingot, null, false, new ItemStack[]{new ItemStack(EMTItems.materials_thaumiumplate)});
+        Recipes.macerator.addRecipe(Recipes.inputFactory.forStack(new ItemStack(BlocksTC.oreAmber)), null, false, new ItemStack[] { new ItemStack(EMTItems.materials_crushedoreamber, 2) });
+
+
+        Recipes.macerator.addRecipe(Recipes.inputFactory.forStack(new ItemStack(BlocksTC.oreCinnabar)), null, false, new ItemStack[] { new ItemStack(EMTItems.materials_crushedorecinnabar, 2) });
+
+
+        Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(new ItemStack(ItemsTC.ingots, 1, 0)), null, false, new ItemStack[] { new ItemStack(EMTItems.materials_thaumiumplate) });
 
         NBTTagCompound waterAmount = new NBTTagCompound();
         waterAmount.setInteger("amount", 1000);
 
-        IC2RecipesInput pur_ore_amber = new IC2RecipesInput(new ItemStack(EMTItems.materials_crushedoreamber));
-        Recipes.oreWashing.addRecipe(pur_ore_amber, waterAmount, false, new ItemStack[]{new ItemStack(EMTItems.materials_purifiedoreamber),new ItemStack(Item.getByNameOrId("ic2:dust"),2,19),new ItemStack(Item.getByNameOrId("ic2:dust"),1,15)});
-
-        IC2RecipesInput pur_ore_cinnabra = new IC2RecipesInput(new ItemStack(EMTItems.materials_crushedorecinnabar));
-        Recipes.oreWashing.addRecipe(pur_ore_cinnabra, waterAmount, false, new ItemStack[]{new ItemStack(EMTItems.materials_purifiedorecinnabar),new ItemStack(Item.getByNameOrId("ic2:dust"),2,28),new ItemStack(Item.getByNameOrId("ic2:dust"),1,15)});
+        Recipes.oreWashing.addRecipe(Recipes.inputFactory.forStack(new ItemStack(EMTItems.materials_crushedoreamber)), waterAmount, false, new ItemStack[] { new ItemStack(EMTItems.materials_purifiedoreamber), new ItemStack(Item.getByNameOrId("ic2:dust"), 2, 19), new ItemStack(Item.getByNameOrId("ic2:dust"), 1, 15) });
+        Recipes.oreWashing.addRecipe(Recipes.inputFactory.forStack(new ItemStack(EMTItems.materials_crushedorecinnabar)), waterAmount, false, new ItemStack[] { new ItemStack(EMTItems.materials_purifiedorecinnabar), new ItemStack(Item.getByNameOrId("ic2:dust"), 2, 28), new ItemStack(Item.getByNameOrId("ic2:dust"), 1, 15) });
     }
 
 

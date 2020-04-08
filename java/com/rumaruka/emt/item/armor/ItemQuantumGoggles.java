@@ -1,6 +1,6 @@
 package com.rumaruka.emt.item.armor;
 
-import com.rumaruka.emt.EMT;
+import com.rumaruka.emt.emt;
 import ic2.api.item.IC2Items;
 import ic2.core.IC2;
 import net.minecraft.entity.Entity;
@@ -39,7 +39,7 @@ public class ItemQuantumGoggles extends ItemNanoGoggles {
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return EMT.TEXTURE_PATH + ":textures/models/armor/thaumicquantumhelmet.png";
+        return emt.TEXTURE_PATH + ":textures/models/armor/thaumicquantumhelmet.png";
     }
     @Override
     public double getDamageAbsorptionRatio() {

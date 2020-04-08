@@ -1,6 +1,6 @@
 package com.rumaruka.emt.item.armor;
 
-import com.rumaruka.emt.EMT;
+import com.rumaruka.emt.emt;
 import com.rumaruka.emt.util.EMTConfigHandler;
 import ic2.api.item.ElectricItem;
 import net.minecraft.entity.Entity;
@@ -31,7 +31,7 @@ public class ItemNanoGoggles extends ItemElectricGoggles{
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return EMT.MOD_ID+ ":textures/models/armor/thaumicnanohelmet.png";
+        return emt.MOD_ID+ ":textures/models/armor/thaumicnanohelmet.png";
     }
     @Override
     public double getDamageAbsorptionRatio() {
@@ -45,8 +45,8 @@ public class ItemNanoGoggles extends ItemElectricGoggles{
 
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-        if (EMTConfigHandler.nightVisionOff == false) {
-            if (ElectricItem.manager.canUse(itemStack, 1 / 1000)) {
+        if (!EMTConfigHandler.nightVisionOff) {
+            if (ElectricItem.manager.canUse(itemStack, (float)1 / 1000)) {
 
                 int x = MathHelper.floor(player.posX);
                 int z = MathHelper.floor(player.posZ);
@@ -55,7 +55,7 @@ public class ItemNanoGoggles extends ItemElectricGoggles{
                 int lightlevel = player.world.getBlockLightOpacity(new BlockPos(x, y, z));
                 if (lightlevel >= 0)
                     player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 300, -3,true,false));
-                ElectricItem.manager.use(itemStack, 1 / 1000, player);
+                ElectricItem.manager.use(itemStack, (float)1 / 1000, player);
             } else {
                 player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 300, 0, true,false));
             }

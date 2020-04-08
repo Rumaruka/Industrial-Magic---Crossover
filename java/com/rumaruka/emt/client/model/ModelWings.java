@@ -3,6 +3,8 @@ package com.rumaruka.emt.client.model;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModelWings extends ModelBiped {
 
@@ -43,6 +45,7 @@ public class ModelWings extends ModelBiped {
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
         this.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
         rightWing.render(f5);

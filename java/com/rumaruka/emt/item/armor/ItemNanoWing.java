@@ -1,6 +1,6 @@
 package com.rumaruka.emt.item.armor;
 
-import com.rumaruka.emt.EMT;
+import com.rumaruka.emt.emt;
 import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
 import com.rumaruka.emt.util.EMTConfigHandler;
 import ic2.api.item.ElectricItem;
@@ -61,7 +61,7 @@ public class ItemNanoWing extends ItemThaumiumReinforcedWing implements IElectri
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return EMT.TEXTURE_PATH + ":textures/models/armor/nanowing.png";
+        return emt.TEXTURE_PATH + ":textures/models/armor/nanowing.png";
 
     }
 

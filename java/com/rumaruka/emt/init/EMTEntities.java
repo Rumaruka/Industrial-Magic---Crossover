@@ -1,6 +1,6 @@
 package com.rumaruka.emt.init;
 
-import com.rumaruka.emt.EMT;
+import com.rumaruka.emt.emt;
 import com.rumaruka.emt.entity.EntityArcher;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
@@ -14,8 +14,8 @@ public class EMTEntities {
 
     public static void registerEMTEntities() {
         //EntityRegistry.registerModEntity(EntityLaser.class, "laser", entityIDs++, EMT.instance, 80, 3, true);
-        EntityRegistry.registerModEntity( new ResourceLocation(EMT.MOD_ID,"archer"),EntityArcher.class, "entityArcher",entityIDs++, EMT.instance, 80, 3, true);
-        EntityRegistry.registerEgg( new ResourceLocation(EMT.MOD_ID,"archer"),0x99111F, 0xE5685);
+        EntityRegistry.registerModEntity( new ResourceLocation(emt.MOD_ID,"archer"),EntityArcher.class, "entityArcher",entityIDs++, emt.instance, 80, 3, true);
+        EntityRegistry.registerEgg( new ResourceLocation(emt.MOD_ID,"archer"),0x99111F, 0xE5685);
        // EntityRegistry.registerModEntity(EntityShield.class, "shield", entityIDs++, EMT.instance, 80, 3, true);
       //  EntityRegistry.registerModEntity(EntityEnergyBall.class, "energyBall", entityIDs++, EMT.instance, 80, 60, true);
     }

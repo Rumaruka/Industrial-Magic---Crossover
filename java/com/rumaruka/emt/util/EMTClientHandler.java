@@ -1,7 +1,8 @@
 package com.rumaruka.emt.util;
 
 import com.rumaruka.emt.client.EMTKeys;
-import com.rumaruka.emt.EMT;
+
+import com.rumaruka.emt.emt;
 import com.rumaruka.emt.init.EMTItems;
 import com.rumaruka.emt.network.PacketEMTKeys;
 import ic2.core.IC2;
@@ -24,7 +25,7 @@ public class EMTClientHandler {
     @SubscribeEvent
     public void clientTick(TickEvent.ClientTickEvent e){
         if(EMTKeys.keyUnequip.isPressed()){
-            EMT.INSTANCE.sendToServer(new PacketEMTKeys());
+            emt.INSTANCE.sendToServer(new PacketEMTKeys());
         }
     }
     @SubscribeEvent

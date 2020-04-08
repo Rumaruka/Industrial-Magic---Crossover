@@ -44,6 +44,7 @@ public class  ItemFeatherWing extends ItemArmor implements IVisDiscountGear {
         try {
             if (entityLiving instanceof EntityPlayer) {
                 ModelWings mw = new ModelWings();
+                assert itemStack.getTagCompound() != null;
                 mw.isJumping = itemStack.getTagCompound().getBoolean("isJumping");
                 return mw;
             }

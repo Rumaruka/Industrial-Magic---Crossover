@@ -22,14 +22,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
 import thaumcraft.common.lib.SoundsTC;
 import thaumcraft.common.lib.utils.BlockUtils;
-<<<<<<< HEAD
+
 import thaumcraft.common.lib.utils.EntityUtils;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Objects;
-=======
->>>>>>> 0801714546f4b74645997e9fcd4aabbdd87cdf3e
+
 
 public class ItemRockbreakerDrill extends ItemThaumiumDrill {
     private static final Block[] isEffective = { Blocks.NETHER_BRICK, Blocks.NETHERRACK, Blocks.GLOWSTONE, Blocks.IRON_BLOCK, Blocks.GOLD_BLOCK, Blocks.DIAMOND_BLOCK, Blocks.LAPIS_BLOCK, Blocks.REDSTONE_BLOCK, Blocks.REDSTONE_ORE, Blocks.EMERALD_ORE, Blocks.EMERALD_ORE, Blocks.STONEBRICK, Blocks.GLASS, Blocks.STONE, Blocks.GOLD_ORE, Blocks.IRON_ORE, Blocks.COAL_ORE, Blocks.COBBLESTONE,

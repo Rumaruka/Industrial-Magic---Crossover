@@ -16,17 +16,21 @@ import java.util.List;
 
 public class TileEntityAirSolar extends TileEntitySolarBase {
 
+
+    public float bonus_tick;
+
     public TileEntityAirSolar(){
         super();
         energy = new BasicSource(this,10000,3);
         output= EMTConfigHandler.compressedSolarOutput;
+        bonus_tick = 2.5f;
     }
 
     @Override
     public void createEnergy() {
         if(isSunVisible && this.pos.getY()>=150){
 
-            energy.addEnergy((output)*2.5);
+            energy.addEnergy((output)*bonus_tick);
 
         }
         else if(isSunVisible){
