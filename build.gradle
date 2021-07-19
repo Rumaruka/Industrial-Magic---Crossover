@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "12.2.0"
+version = "12.4.1"
 group = "com.rumaruka.emt" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "emt"
 
@@ -41,8 +41,8 @@ repositories {
 }
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
-    compile  'net.industrial-craft:industrialcraft-2:2.8.197-ex112:dev'
-    compile  'net.industrial-craft:industrialcraft-2:2.8.197-ex112:api'
+    compile  'net.industrial-craft:industrialcraft-2:2.8.221-ex112:dev'
+    compile  'net.industrial-craft:industrialcraft-2:2.8.221-ex112:api'
    // runtime "net.industrial-craft:industrialcraft-2:2.8.197-ex112:api"
 
 }

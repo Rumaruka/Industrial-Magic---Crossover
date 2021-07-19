@@ -19,10 +19,6 @@ public class EMTConfigHandler {
     public static boolean impactOfRain;
     public static double compressedSolarOutput;
     public static double doubleCompressedSolarOutput;
-    public static double nanoBootsSpeed;
-    public static double quantumBootsSpeed;
-    public static double nanoBootsJump;
-    public static double quantumBootsJump;
     public static double tripleCompressedSolarOutput;
     public static double fireOutput;
     public static double waterOutput;
@@ -38,8 +34,17 @@ public class EMTConfigHandler {
     public static boolean thorHammerResearch;
     public static int maceratorBaseSpeed;
     public static int etherealProcessorBonus;
+    public static double electricBootsUseEnergy;
+    public static double nanoBootsUseEnergy;
+    public static double quantumBootsUseEnergy;
 
+    public static double electricBootsSpeedBust;
+    public static double nanoBootsSpeedBust;
+    public static double quantumBootsSpeedBust;
 
+    public static double electricJumpBust;
+    public static double nanoBootsJumpBust;
+    public static double quantumBootsJumpBust;
     public static void init(File file) {
         cfg = new Configuration(file);
         syncConfig();
@@ -60,11 +65,22 @@ public class EMTConfigHandler {
         entropyOutput = cfg.get(OUTPUTS, "Perditio Output", 10000).getDouble(entropyOutput);
         earthOutput = cfg.get(OUTPUTS, "Terra Output", 2000).getDouble(earthOutput);
 
+        electricBootsUseEnergy = cfg.get(VALUES,"Electric EU/tick",10,"How much electric boots use EU/tick! Default: 10 EU/Tick").getDouble(electricBootsUseEnergy);
+        nanoBootsUseEnergy = cfg.get(VALUES,"Nano EU/tick",100,"How much nano boots use EU/tick! Default: 100 EU/Tick").getDouble(nanoBootsUseEnergy);
+        quantumBootsUseEnergy = cfg.get(VALUES,"Quntum EU/tick",1000,"How much quantum boots use EU/tick! Default: 1000 EU/Tick").getDouble(quantumBootsUseEnergy);
+
         outputCap = cfg.get(OUTPUTS, "Output Cap", -1).getDouble(outputCap);
         inventoryBaubleProdution = cfg.get(VALUES, "Inventory Charging Ring production", 32, "Default is 32").getInt();
 
         armorBaubleProduction = cfg.get(VALUES, "Armor Charging Ring production", 32, "Default is 32").getInt();
 
+        electricBootsSpeedBust = cfg.get(VALUES,"Electric Jump Boost",0.5,"Boost:").getDouble(electricBootsSpeedBust);
+        nanoBootsUseEnergy = cfg.get(VALUES,"Nano Jump Boost",0.525,"Boost:").getDouble(nanoBootsSpeedBust);
+        quantumBootsUseEnergy = cfg.get(VALUES,"Quantum Jump Boost",0.555,"Boost:").getDouble(quantumBootsSpeedBust);
+
+        electricJumpBust = cfg.get(VALUES,"Electric Jump Boost",0.3,"Boost:").getDouble(electricJumpBust);
+        nanoBootsJumpBust = cfg.get(VALUES,"Nano Jump Boost",0.35555,"Boost:").getDouble(nanoBootsJumpBust);
+        quantumBootsJumpBust = cfg.get(VALUES,"Quantum Jump Boost",0.5,"Boost:").getDouble(quantumBootsJumpBust);
 
 
         compressedSolarOutput = cfg.get(VALUES, "Compressed Solar Panel Output", 10, "This is the number you have to modify if you want to make the Compressed Solar Panel yield " + "more or less EU per tick. Really, you shouldn't touch that, " + "since it's pretty balanced as it is.").getDouble(compressedSolarOutput);

@@ -14,9 +14,7 @@ public class PacketEMTKeys implements IMessage, IMessageHandler<PacketEMTKeys,IM
 
     @Override
     public IMessage onMessage(PacketEMTKeys message, MessageContext ctx) {
-        if(ctx.getServerHandler().player.inventory.armorInventory.get(2)!= ItemStack.EMPTY && ctx.getServerHandler().player.inventory.armorInventory.get(2).getItem()== EMTItems.quantumarmor){
-            Objects.requireNonNull(ctx.getServerHandler().player.inventory.armorInventory.get(2).getTagCompound()).setBoolean("unequip", true);
-        }
+
 
         return null;
     }

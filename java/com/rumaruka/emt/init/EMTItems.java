@@ -1,17 +1,23 @@
 package com.rumaruka.emt.init;
 
-import com.rumaruka.emt.emt;
 import com.rumaruka.emt.client.creativetabs.EMTCreativeTabs;
+import com.rumaruka.emt.emt;
 import com.rumaruka.emt.item.ItemElectricScribingTools;
 import com.rumaruka.emt.item.ItemIC2Baubles;
 import com.rumaruka.emt.item.ItemMaterials;
 import com.rumaruka.emt.item.ItemOneRing;
-import com.rumaruka.emt.item.armor.*;
-import com.rumaruka.emt.item.tool.ItemElectricThorHammer;
-import com.rumaruka.emt.item.tool.ItemThorHammer;
-import com.rumaruka.emt.item.tool.ItemThorHammerBroken;
+import com.rumaruka.emt.item.armor.boots.ItemElectricBootsTraveller;
+import com.rumaruka.emt.item.armor.boots.ItemNanoBootsTraveller;
+import com.rumaruka.emt.item.armor.boots.ItemQuantumBootsTraveller;
+import com.rumaruka.emt.item.armor.googles.ItemElectricGoggles;
+import com.rumaruka.emt.item.armor.googles.ItemNanoGoggles;
+import com.rumaruka.emt.item.armor.googles.ItemQuantumGoggles;
+import com.rumaruka.emt.item.armor.googles.ItemSolarHelmetRevealing;
+import com.rumaruka.emt.item.armor.wings.ItemFeatherWing;
+import com.rumaruka.emt.item.armor.wings.ItemNanoWing;
+import com.rumaruka.emt.item.armor.wings.ItemQuantumWing;
+import com.rumaruka.emt.item.armor.wings.ItemThaumiumReinforcedWing;
 import com.rumaruka.emt.item.tool.*;
-
 import joptsimple.internal.Strings;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -74,12 +80,6 @@ public class EMTItems {
     public static Item emtbaubles_inventory;
     public static Item electricscribingtools;
 
-    public static Item quantumarmor;
-    public static Item quantumarmor_thaumium;
-    public static Item quantumarmor_nano;
-    public static Item quantumarmor_jetpack;
-    public static Item quantumarmor_quantum;
-
     public static Item onering;
 
 
@@ -87,13 +87,7 @@ public class EMTItems {
 
     public static void init() {
         onering = new ItemOneRing().setUnlocalizedName("onering").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
-        quantumarmor = new ItemInfusedQuantumChestplate("quantumarmor",8000000,100,4).setUnlocalizedName("quantumarmor").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
-        quantumarmor_thaumium = new ItemInfusedQuantumChestplate("quantumarmor_thaumium",8000000,100,4).setUnlocalizedName("quantumarmor_thaumium").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
-        quantumarmor_nano = new ItemInfusedQuantumChestplate("quantumarmor_nano",8000000,100,4).setUnlocalizedName("quantumarmor_nano").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
-        quantumarmor_quantum = new ItemInfusedQuantumChestplate("quantumarmor_quantum",8000000,100,4).setUnlocalizedName("quantumarmor_quantum").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
-        quantumarmor_jetpack = new ItemInfusedQuantumChestplate("quantumarmor_jetpack",8000000,100,4).setUnlocalizedName("quantumarmor_jetpack").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
-
-        ironomnitool = new ItemIronOmniTool().setUnlocalizedName("ironomnitool").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
+              ironomnitool = new ItemIronOmniTool().setUnlocalizedName("ironomnitool").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
         diamondomnitool = new ItemDiamondOmniTool().setUnlocalizedName("diamondomnitool").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
         thaumiumomnitool = new ItemThaumiumOmniTool().setUnlocalizedName("thaumiumomnitool").setCreativeTab(EMTCreativeTabs.EMT_CREATIVEtabs);
 
@@ -193,11 +187,6 @@ public class EMTItems {
         EMTItems.registerItem(emtbaubles_armor, emtbaubles_armor.getUnlocalizedName().substring(5));
         EMTItems.registerItem(emtbaubles_inventory, emtbaubles_inventory.getUnlocalizedName().substring(5));
         EMTItems.registerItem(electricscribingtools, electricscribingtools.getUnlocalizedName().substring(5));
-        EMTItems.registerItem(quantumarmor, quantumarmor.getUnlocalizedName().substring(5));
-        EMTItems.registerItem(quantumarmor_nano, quantumarmor_nano.getUnlocalizedName().substring(5));
-        EMTItems.registerItem(quantumarmor_quantum, quantumarmor_quantum.getUnlocalizedName().substring(5));
-        EMTItems.registerItem(quantumarmor_thaumium, quantumarmor_thaumium.getUnlocalizedName().substring(5));
-        EMTItems.registerItem(quantumarmor_jetpack, quantumarmor_jetpack.getUnlocalizedName().substring(5));
         EMTItems.registerItem(onering, onering.getUnlocalizedName().substring(5));
 
     }
@@ -254,11 +243,6 @@ public class EMTItems {
         renderItems(emtbaubles_armor);
         renderItems(emtbaubles_inventory);
         renderItems(electricscribingtools);
-        renderItems(quantumarmor);
-        renderItems(quantumarmor_nano);
-        renderItems(quantumarmor_quantum);
-        renderItems(quantumarmor_thaumium);
-        renderItems(quantumarmor_jetpack);
         renderItems(onering);
 
 

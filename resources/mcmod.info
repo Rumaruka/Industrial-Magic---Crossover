@@ -2,9 +2,9 @@
 {
   "modid": "emt",
   "name": "Electro-Magic Tools",
-  "description": "Unoffiacial-Unofficial crossover IC2 and TC6.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "description": "Unofficial-Unofficial crossover IC2 and TC6.",
+  "version": "12.3.5",
+  "mcversion": "1.12.2",
   "url": "",
   "updateUrl": "",
   "authorList": ["Rumaruka"],

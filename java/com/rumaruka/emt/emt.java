@@ -1,34 +1,18 @@
 package com.rumaruka.emt;
 
 
-
-
-
 import com.rumaruka.emt.command.CommandOutput;
-import com.rumaruka.emt.init.EMTBlocks;
-import com.rumaruka.emt.init.EMTEntities;
-import com.rumaruka.emt.init.EMTItems;
-import com.rumaruka.emt.init.EMTOreDictionary;
-import com.rumaruka.emt.init.EMTRecipes;
-import com.rumaruka.emt.init.EMTTile;
-import com.rumaruka.emt.network.PacketEMTKeys;
+import com.rumaruka.emt.init.*;
+import com.rumaruka.emt.item.events.BootsFallEvent;
+import com.rumaruka.emt.item.events.BootsJumpEvent;
 import com.rumaruka.emt.proxy.CommonProxy;
-import com.rumaruka.emt.util.EMTClientHandler;
-import com.rumaruka.emt.util.EMTConfigHandler;
-import com.rumaruka.emt.util.EMTEssentiasOutputs;
-import com.rumaruka.emt.util.EMTEventHandler;
-import com.rumaruka.emt.util.EMTIC2Recipes;
-import com.rumaruka.emt.util.EMTThauminiconsRecipes;
-import com.rumaruka.emt.util.KnowledgeEMT;
+import com.rumaruka.emt.util.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
-
-
-
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -95,6 +79,8 @@ public class emt {
         }
 
         MinecraftForge.EVENT_BUS.register(new KnowledgeEMT());
+
+
         KnowledgeEMT.clInit.call();
         EMTEssentiasOutputs.addPrimalOutputs();
         EMTEssentiasOutputs.addOutputs();
@@ -122,8 +108,8 @@ public class emt {
         EMTIC2Recipes.setup();
         LOGGER.info("Registration Recipes Complete");
         EMTTile.registerTiles();
-
-
+        MinecraftForge.EVENT_BUS.register(new BootsFallEvent());
+        MinecraftForge.EVENT_BUS.register(new BootsJumpEvent());
         proxy.load();
 
     }

@@ -4,7 +4,7 @@ import baubles.api.BaublesApi;
 
 import com.rumaruka.emt.emt;
 import com.rumaruka.emt.init.EMTItems;
-import com.rumaruka.emt.item.armor.ItemFeatherWing;
+import com.rumaruka.emt.item.armor.wings.ItemFeatherWing;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.player.EntityPlayer;
