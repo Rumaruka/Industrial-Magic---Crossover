@@ -17,29 +17,22 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 public class EMTEventHandler {
-
-
+   
    @SubscribeEvent
    public void onPlayerTickEvent(TickEvent.PlayerTickEvent e){
        ItemStack is = e.player.inventory.armorInventory.get(2);
-       if(is == ItemStack.EMPTY || !(is.getItem() instanceof ItemFeatherWing || e.phase== TickEvent.Phase.START)){
-
-           return;
-
-       }
-       if(e.player.motionY > 0){
-           e.player.fallDistance -= e.player.motionY;
-       }
+        if (is.getItem() instanceof ItemFeatherWing && e.phase == TickEvent.Phase.START && e.player.motionY > 0) {
+            e.player.fallDistance -= e.player.motionY;
+        }
    }
+   
    @SubscribeEvent
    public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent e){
        if(e.getModID().equals(emt.MOD_ID)){
            EMTConfigHandler.syncConfig();
-
        }
-
    }
-
+   
    @SubscribeEvent
    public void onSetEntityAttack(LivingSetAttackTargetEvent e){
        if(e.getEntityLiving()!=null&&e.getTarget()!=null&&e.getEntityLiving()instanceof EntityLiving && e.getTarget() instanceof EntityPlayer ){
@@ -53,13 +46,10 @@ public class EMTEventHandler {
                }
            }
        }
-
    }
-
 
    @SubscribeEvent
    public void onEntityLivingDrop(LivingDropsEvent e){
-
         if (e.getEntityLiving() instanceof EntityCreeper) {
             EntityCreeper creeper = (EntityCreeper) e.getEntityLiving();
             if (creeper.getPowered()) {
@@ -67,5 +57,4 @@ public class EMTEventHandler {
            }
          }
     }
-
 }
